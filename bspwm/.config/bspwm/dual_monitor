@@ -1,0 +1,6 @@
+#!/bin/dash
+
+my_laptop_external_monitor=$(xrandr --query | grep 'HDMI-1')
+if [[ $my_laptop_external_monitor = *connected* ]]; then
+    xrandr --output HDMI-1 --right-of eDP-1 --auto
+fi

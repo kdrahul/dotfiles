@@ -1,0 +1,213 @@
+# set completion-group-bg         "#2e3440"
+# set completion-group-fg         "#d8dee9"
+# set completion-bg               "#2e3440"
+# set completion-fg               "#d8dee9"
+# set completion-highlight-bg     "#458588"
+# set completion-highlight-fg     "#d8dee9"
+
+# set notification-error-bg       "#3c3836"
+# set notification-error-fg       "#d8dee9"
+# set notification-warning-bg     "#3c3836"
+# set notification-warning-fg     "#d8dee9"
+# set notification-bg             "#3c3836"
+# set notification-fg             "#d8dee9"
+
+# set index-bg                    "#1d2021"
+# set index-fg                    "#d8dee9"
+# set index-active-bg             "#2e3440"
+# set index-active-fg             "#d8dee9"
+
+# set inputbar-bg                 "#3c3836"
+# set inputbar-fg                 "#d8dee9"
+
+# set statusbar-bg                "#2e3440"
+# set statusbar-fg                "#d8dee9"
+
+# set highlight-color             "#458588"
+# set highlight-active-color      "#458588"
+
+# set default-bg                  "#1d2021"
+# set default-fg                  "#001512"
+# set recolor-lightcolor          "#2e3440"
+# set recolor-darkcolor           "#d8dee9"
+
+# Base16 Atelier Dune
+# Author: Bram de Haan (http://atelierbramdehaan.nl)
+
+#set default-bg                  "#20201d"
+#set default-fg                  "#292824"
+#
+#set statusbar-fg                "#999580"
+#set statusbar-bg                "#6e6b5e"
+#
+#set inputbar-bg                 "#20201d"
+#set inputbar-fg                 "#fefbec"
+#
+#set notification-bg             "#20201d" set notification-fg             "#fefbec" set notification-error-bg       "#20201d"
+#set notification-error-fg       "#d73737"
+#
+#set notification-warning-bg     "#20201d"
+#set notification-warning-fg     "#d73737"
+# set highlight-color             "#ae9513" set highlight-active-color      "#6684e1"
+#
+#set completion-bg               "#292824"
+#set completion-fg               "#6684e1"
+#
+#set completion-highlight-fg     "#fefbec"
+#set completion-highlight-bg     "#6684e1"
+#
+#set recolor-lightcolor          "#20201d"
+#set recolor-darkcolor           "#e8e4cf"
+#
+#set recolor-keephue             "false"
+
+# Base16 Nord
+# Author: arcticicestudio
+
+# set default-bg                  "#2E3440"
+# set default-fg                  "#3B4252"
+# 
+# set statusbar-fg                "#D8DEE9"
+# set statusbar-bg                "#434C5E"
+# 
+# set inputbar-bg                 "#2E3440"
+# set inputbar-fg                 "#8FBCBB"
+# 
+# set notification-bg             "#2E3440"
+# set notification-fg             "#8FBCBB"
+# 
+# set notification-error-bg       "#2E3440"
+# set notification-error-fg       "#BF616A"
+# 
+# set notification-warning-bg     "#2E3440"
+# set notification-warning-fg     "#BF616A"
+# 
+# set highlight-color             "#EBCB8B"
+# set highlight-active-color      "#81A1C1"
+# 
+# set completion-bg               "#3B4252"
+# set completion-fg               "#81A1C1"
+# 
+# set completion-highlight-fg     "#8FBCBB"
+# set completion-highlight-bg     "#81A1C1"
+# 
+# set recolor-lightcolor          "#2E3440"
+# set recolor-darkcolor           "#ECEFF4"
+# 
+# set recolor                     "true"
+# set recolor-keephue             "false"
+
+###############################################################################
+
+# Base16 Tomorrow Night
+# Author: Chris Kempson (http://chriskempson.com)
+
+# set default-bg                  "#1d1f21"
+# set default-fg                  "#282a2e"
+
+# set statusbar-fg                "#b4b7b4"
+# set statusbar-bg                "#373b41"
+
+# set inputbar-bg                 "#1d1f21"
+# set inputbar-fg                 "#ffffff"
+
+# set notification-bg             "#1d1f21"
+# set notification-fg             "#ffffff"
+
+# set notification-error-bg       "#1d1f21"
+# set notification-error-fg       "#cc6666"
+
+# set notification-warning-bg     "#1d1f21"
+# set notification-warning-fg     "#cc6666"
+
+# set highlight-color             "#f0c674"
+# set highlight-active-color      "#81a2be"
+
+# set completion-bg               "#282a2e"
+# set completion-fg               "#81a2be"
+
+# set completion-highlight-fg     "#ffffff"
+# set completion-highlight-bg     "#81a2be"
+
+# set recolor-lightcolor          "#1d1f21"
+# set recolor-darkcolor           "#e0e0e0"
+
+# set recolor                     "true"
+# set recolor-keephue             "false"
+
+###############################################################################
+# Base16 OneDark
+# Author: Lalit Magant (http://github.com/tilal6991)
+
+set default-bg                  "#19061f"
+set default-fg                  "#c8ccd4"
+
+set statusbar-fg                "#c8ccd4"
+set statusbar-bg                "#1e222a"
+
+set inputbar-bg                 "#19061f"
+set inputbar-fg                 "#c8ccd4"
+
+set notification-bg             "#19061f"
+set notification-fg             "#c8ccd4"
+
+set notification-error-bg       "#19061f"
+set notification-error-fg       "#e06c75"
+
+set notification-warning-bg     "#19061f"
+set notification-warning-fg     "#e06c75"
+
+set highlight-color             "#e5c07b"
+set highlight-active-color      "#61afef"
+
+set completion-bg               "#353b45"
+set completion-fg               "#61afef"
+
+set completion-highlight-fg     "#c8ccd4"
+set completion-highlight-bg     "#61afef"
+
+set recolor-lightcolor          "#19061f"
+set recolor-darkcolor           "#abb2bf"
+
+set recolor                     "true"
+set recolor-keephue             "false"
+
+################################################################################
+# Ayu-dark
+# Author: Lalit Magant (http://github.com/tilal6991)
+
+set default-bg                  "#19061f"
+set default-fg                  "#c8ccd4"
+
+set statusbar-fg                "#c8ccd4"
+set statusbar-bg                "#1e222a"
+
+set inputbar-bg                 "#19061f"
+set inputbar-fg                 "#c8ccd4"
+
+set notification-bg             "#19061f"
+set notification-fg             "#c8ccd4"
+
+set notification-error-bg       "#19061f"
+set notification-error-fg       "#e06c75"
+
+set notification-warning-bg     "#19061f"
+set notification-warning-fg     "#e06c75"
+
+set highlight-color             "#e5c07b"
+set highlight-active-color      "#61afef"
+
+set completion-bg               "#353b45"
+set completion-fg               "#61afef"
+
+set completion-highlight-fg     "#c8ccd4"
+set completion-highlight-bg     "#61afef"
+
+set recolor-lightcolor          "#000000"
+set recolor-darkcolor           "#f2f2f2"
+
+set recolor                     "true"
+set recolor-keephue             "false"
+################################################################################
+
+set selection-clipboard clipboard
