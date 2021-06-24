@@ -3,21 +3,21 @@
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc -m 1 &
 
 xrandr --output eDP-1 --brightness 0.5
+xrandr --output HDMI-1 --left-of eDP-1 --auto
 xset r rate 250 150
 setxkbmap -option ctrl:nocaps
 
 compton -b
 feh --bg-scale /home/rdk/Pictures/Wallpapers/53-robert-baratheon-vs-rhaegar-targaryen-art.jpg
 
-if [ -x $HOME/bin/own_script_bspwm_laptop_dual_monitor ];then
-    ./dual_monitor
-fi
+# if [ -x $HOME/bin/own_script_bspwm_laptop_dual_monitor ];then
+#     ./dual_monitor
+# fi
 
 bash ~/.config/polybar/launch.sh
 sh /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
-bspc monitor eDP-1 -d code office pdf mail music
-bspc monitor HDMI-1 -d V VI VII teams web
-
+bspc monitor eDP-1 -d music code office teams mail 
+bspc monitor HDMI-1 -d web superuser twitch pdf news 
 
 bspc config border_width                  1
 bspc config focused_border_color          "#FFB454"
@@ -28,5 +28,5 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Teams desktop='^9'
-bspc rule -a Firefox desktop='^10' follow=on
+bspc rule -a Teams desktop='^4'
+bspc rule -a Firefox desktop='^1' follow=on
