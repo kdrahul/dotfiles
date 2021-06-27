@@ -116,7 +116,7 @@ export ROCKET_CLI_COLORS=false
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias v="nvim"
+alias e="nvim"
 # alias dust="dust -r"
 # alias wallpaper="wal --backend colorz -i ~/Pictures/Wallpapers --iterative"
 alias ins="sudo apt install"
@@ -135,6 +135,5 @@ alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -vp"
 alias tmux="tmux -u"
-alias e="~/./Downloads/nvim.appimage"
 alias cfb="nvim ~/.config/bspwm/bspwmrc"
 alias cfs="nvim ~/.config/sxhkd/sxhkdrc"
