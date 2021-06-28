@@ -4,7 +4,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
-Plug 'itchyny/lightline.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -14,6 +13,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'rstacruz/vim-closer'
+Plug 'hoob3rt/lualine.nvim'
 
 "Telescope
 Plug 'nvim-lua/popup.nvim'

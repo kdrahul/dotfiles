@@ -1,3 +1,21 @@
+-- LuaLine
+require('lualine').setup {
+  options = {
+    theme = 'ayu_dark',
+    icons_enabled = false,
+  },
+  sections = {
+    lualine_a = {
+      'mode',
+      'g:coc_status'
+    },
+    lualine_b = {
+      'branch'
+    },
+    lualine_x = {'filetype'}
+  }
+}
+
 local action_state = require('telescope.actions.state')
 require('telescope').setup{
   defaults = {

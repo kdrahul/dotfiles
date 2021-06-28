@@ -97,28 +97,6 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-" Lightline
-let g:lightline = {
-            \ 'colorscheme': 'ayu',
-            \ 'active': {
-                \   'left': [ [ 'mode', 'paste' ],
-                \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ],
-                \   'right': [ ['lineinfo'],
-                \              ['percent'],
-                \              ['filetype']]
-                \ },
-                \'tabline' : {
-                    \   'left': [ [ 'tabs' ] ] 
-                    \ },
-                    \ 'component_function': {
-                        \   'filename': 'LightlineFilename',
-                        \   'cocstatus': 'coc#status'
-                        \ },
-                        \ }
-function! LightlineFilename()
-  return expand('%:t') !=# '' ? @% : '[No Name]'
-endfunction
-
 " Use auocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
