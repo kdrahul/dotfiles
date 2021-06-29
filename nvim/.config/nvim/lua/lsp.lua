@@ -14,10 +14,6 @@ require'compe'.setup {
   source = {
     path = true;
     buffer = true;
-    vsnip = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    spell = true;
     snippets_nvim = true;
     your_awesome_source = {};
   };

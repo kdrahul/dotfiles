@@ -31,10 +31,15 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'neovim/nvim-lspconfig'
 " Extensions to built-in LSP, for example, providing type inlay hints
 Plug 'nvim-lua/lsp_extensions.nvim'
-
 " Autocompletion framework for built-in LSP
 Plug 'nvim-lua/completion-nvim'
 
+" Snippets
+Plug 'L3MON4D3/LuaSnip'
+" Track the engine.
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 
 " Colors
 Plug 'ap/vim-css-color'

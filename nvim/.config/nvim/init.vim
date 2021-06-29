@@ -38,6 +38,10 @@ source ~/.config/nvim/plugins.vim
   nnoremap n nzzzv
   nnoremap N Nzzzv
 
+let g:UltiSnipsExpandTrigger="<leader>t"
+let g:UltiSnipsJumpForwardTrigger="<Alt>j"
+let g:UltiSnipsJumpBackwardTrigger="<Alt>k"
+
 "---------------------------------------------------------------------------------
 " Formatters
 "---------------------------------------------------------------------------------
