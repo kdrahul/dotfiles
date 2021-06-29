@@ -38,9 +38,9 @@ source ~/.config/nvim/plugins.vim
   nnoremap n nzzzv
   nnoremap N Nzzzv
 
-let g:UltiSnipsExpandTrigger="<leader>t"
-let g:UltiSnipsJumpForwardTrigger="<Alt>j"
-let g:UltiSnipsJumpBackwardTrigger="<Alt>k"
+
+let g:UltiSnipsExpandTrigger="<C-e>"
+let g:UltiSnipsJumpForwardTrigger="<C-f>"
 
 "---------------------------------------------------------------------------------
 " Formatters
@@ -82,6 +82,7 @@ let base16colorspace=256  " Access colors present in 256 colorspace. Disable thi
 
 lua require("kd")
 lua require("lsp")
+" lua require("snips")
 " nnoremap <C-_> :Telescope current_buffer_fuzzy_find sorting_strategy=ascending<cr>
 " nnoremap <C-_> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending"})<cr>
 nnoremap <C-_> <cmd>lua require('kd').curr_buff()<cr>
