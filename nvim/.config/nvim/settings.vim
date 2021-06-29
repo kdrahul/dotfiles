@@ -17,6 +17,7 @@
   set inccommand=nosplit
   set termguicolors           " Disable this for pyWal
   set noshowmode
+  " filetype plugin indent on
   "set mouse=a
   "colorscheme jellybeans
   " colorscheme base16-tomorrow-night

@@ -11,34 +11,6 @@ source ~/.config/nvim/plugins.vim
   let g:mkdp_refresh_slow = 1
   let g:mkdp_markdown_css = '/home/rdk/.config/nvim/markdown-tomorrow-night-theme.css'
 
-" Coc bindings
-  let g:lsc_auto_map = v:true
-  let g:config_Beautifier = v:true
-  inoremap <silent><expr> <c-space> coc#refresh()
-
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gr <Plug>(coc-references)
-  nmap <silent> [g <Plug>(coc-diagnostic-prev)
-  nmap <silent> ]g <Plug>(coc-diagnostic-next)
-  nnoremap <silent> <leader>a :CocAction<CR>
-  nnoremap <silent> <leader>i  :call CocActionAsync('codeAction', '', 'Implement missing members')<CR>
-  " Symbol renaming.
-  nmap <leader>rn <Plug>(coc-rename)
-
-  function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-      call CocActionAsync('doHover')
-    else
-      execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
-  endfunction
-
-" Peek Definition from CoC
-  nnoremap <silent> K :call <SID>show_documentation()<CR> 
-
 " Copy to clipboard
   nnoremap <leader>y "+y
 
@@ -88,10 +60,6 @@ autocmd FileType cpp setlocal shiftwidth=2 softtabstop=2
 autocmd FileType vim setlocal shiftwidth=2 softtabstop=2
 autocmd FileType lua setlocal shiftwidth=2 softtabstop=2
 
-" Enabling javascript codefmt
-let g:coc_global_extensions = [
-      \ 'coc-tsserver'
-      \ ]
 
 if !has('gui_running')
   set t_Co=256
@@ -109,6 +77,7 @@ let base16colorspace=256  " Access colors present in 256 colorspace. Disable thi
 " \}
 
 lua require("kd")
+lua require("lsp")
 " nnoremap <C-_> :Telescope current_buffer_fuzzy_find sorting_strategy=ascending<cr>
 " nnoremap <C-_> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending"})<cr>
 nnoremap <C-_> <cmd>lua require('kd').curr_buff()<cr>
@@ -125,12 +94,11 @@ require('lspconfig').ccls.setup({})
 require('lspconfig').rust_analyzer.setup({})
 EOF
 
-" nvim-compe
-" set completeopt=menu,menuone,noselect
-" inoremap <silent><expr> <C-Space> compe#complete()
-" inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-" inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-" inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-" inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+" Enable type inlay hints
+autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
+\ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
+
+
+source ~/.config/nvim/keymaps.vim
 
 source ~/.config/nvim/settings.vim

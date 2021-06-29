@@ -7,7 +7,7 @@ Plug 'google/vim-glaive'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'branch': 'release/0.x' }
 Plug 'machakann/vim-highlightedyank'
 Plug 'iamcco/markdown-preview.nvim'
@@ -20,15 +20,22 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'fannheyward/telescope-coc.nvim'
+" Plug 'fannheyward/telescope-coc.nvim'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
 "Native LSP
+Plug 'hrsh7th/nvim-compe'
 Plug 'neovim/nvim-lspconfig'
-" Plug 'hrsh7th/nvim-compe'
+" Extensions to built-in LSP, for example, providing type inlay hints
+Plug 'nvim-lua/lsp_extensions.nvim'
+
+" Autocompletion framework for built-in LSP
+Plug 'nvim-lua/completion-nvim'
+
+
 " Colors
 Plug 'ap/vim-css-color'
 Plug 'chriskempson/base16-vim'

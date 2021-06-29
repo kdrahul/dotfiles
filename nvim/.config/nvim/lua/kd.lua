@@ -7,7 +7,7 @@ require('lualine').setup {
   sections = {
     lualine_a = {
       'mode',
-      'g:coc_status'
+      -- 'g:coc_status'
     },
     lualine_b = {
       'branch'
@@ -27,31 +27,7 @@ require('telescope').setup{
   }
 }
 require('telescope').load_extension('fzf')
-require('telescope').load_extension('coc')
 require('nvim-treesitter.configs').setup { highlight = { enable = true } }
--- Compe nvim held off for now
--- require'compe'.setup {
---   enabled = true;
---   autocomplete = true;
---   debug = false;
---   min_length = 1;
---   preselect = 'enable';
---   throttle_time = 80;
---   source_timeout = 200;
---   incomplete_delay = 400;
---   allow_prefix_unmatch = false;
-
---   source = {
---     path = true;
---     buffer = true;
---     vsnip = true;
---     nvim_lsp = true;
---     nvim_lua = true;
---     spell = true;
---     snippets_nvim = true;
---     your_awesome_source = {};
---   };
--- }
 
 local tele_mapping ={}
 
