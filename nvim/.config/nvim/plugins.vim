@@ -1,9 +1,12 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
 " Plugins
+
+" FMT
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -28,7 +31,7 @@ Plug 'nvim-treesitter/playground'
 
 "Native LSP
 Plug 'neovim/nvim-lspconfig'
-" Plug 'hrsh7th/nvim-compe'
+
 " Colors
 Plug 'ap/vim-css-color'
 Plug 'chriskempson/base16-vim'
