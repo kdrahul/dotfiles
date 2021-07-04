@@ -70,7 +70,7 @@ source ~/.config/nvim/plugins.vim
 " Formatters
 "---------------------------------------------------------------------------------
 augroup autoformat_settings
-  autocmd FileType bzl AutoFormatBuffer buildifier
+  " autocmd FileType bzl AutoFormatBuffer buildifier
   autocmd FileType c,cpp,proto,arduino AutoFormatBuffer clang-format
   autocmd FileType dart AutoFormatBuffer dartfmt
   autocmd FileType go AutoFormatBuffer gofmt
@@ -78,7 +78,7 @@ augroup autoformat_settings
   autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
   autocmd FileType java AutoFormatBuffer clang-format
   autocmd FileType python AutoFormatBuffer yapf
-  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType python AutoFormatBuffer autopep8
   autocmd FileType rust AutoFormatBuffer rustfmt
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
@@ -113,11 +113,12 @@ lua require("kd")
 " nnoremap <C-_> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending"})<cr>
 nnoremap <C-_> <cmd>lua require('kd').curr_buff()<cr>
 nnoremap <F5> :lua package.loaded.kd = nil <cr>:source /home/rdk/.config/nvim/init.vim <cr>
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>lg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>r <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>gf <cmd> lua require('telescope.builtin').git_files()<cr>
-nnoremap <leader>gc <cmd> lua require('telescope.builtin').git_commits()<cr>
+nnoremap <leader>c <cmd> lua require('telescope.builtin').git_commits()<cr>
+nnoremap <leader>n :cnext<cr>
+nnoremap <leader>p :cprev<cr>
 
 lua << EOF
 require('lspconfig').tsserver.setup({})
