@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc -m 1 &
 
 xrandr --output eDP-1 --brightness 0.5
-xrandr --output HDMI-1 --left-of eDP-1 --auto
+xrandr --output HDMI-1 --right-of eDP-1 --auto
 xset r rate 250 150
 setxkbmap -option ctrl:nocaps
 
@@ -17,7 +17,7 @@ feh --bg-scale /home/rdk/Pictures/Wallpapers/53-robert-baratheon-vs-rhaegar-targ
 bash ~/.config/polybar/launch.sh
 sh /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
 bspc monitor eDP-1 -d music code office teams mail 
-bspc monitor HDMI-1 -d web superuser twitch pdf news 
+bspc monitor HDMI-1 -d news pdf twitch superuser web
 
 bspc config border_width                  1
 bspc config focused_border_color          "#FFB454"
