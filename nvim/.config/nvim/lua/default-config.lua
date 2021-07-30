@@ -11,65 +11,62 @@ O = {
   number = true,
   relative_number = true,
   cursorline = false,
-  shell = "bash",
+  shell = "dash",
   timeoutlen = 100,
   background = "dark",
   nvim_tree_disable_netrw = 0,
-  statusline = 0;
+  statusline = 0,
   ignore_case = true,
   smart_case = true,
   lushmode = false,
   hl_search = false,
   transparent_window = false,
   leader_key = "space",
-
   -- @usage pass a table with your desired languages
   treesitter = {
     ensure_installed = "all",
-    ignore_install = { "haskell" },
-    highlight = { enabled = true },
-    rainbow = { enabled = false },
+    ignore_install = {"haskell"},
+    highlight = {enabled = true},
+    rainbow = {enabled = false}
   },
-
   plugin = {
-    hop = { active = false },
-    dial = { active = false },
-    dashboard = { active = false },
-    matchup = { active = false },
-    colorizer = { active = false },
-    numb = { active = false },
-    zen = { active = false },
-    ts_playground = { active = false },
-    indent_line = { active = false },
-    ts_context_commentstring = { active = false },
-    symbol_outline = { active = false },
-    debug = { active = false },
-    bqf = { active = false },
-    trouble = { active = false },
-    floatterm = { active = false },
-    spectre = { active = false },
-    lsp_rooter = { active = false },
-    markdown_preview = { active = false },
-    codi = { active = false },
-    telescope_fzy = { active = false },
-    sanegx = { active = false },
-    snap = { active = false },
-    ranger = { active = false },
-    todo_comments = { active = false },
-    lsp_colors = { active = false },
-    git_blame = { active = false },
-    gist = { active = false },
-    gitlinker = { active = false },
-    lazygit = { active = false },
-    octo = { active = false },
-    lush = { active = false },
-    diffview = { active = false },
-    bracey = { active = false },
-    telescope_project = { active = false },
-    dap_install = { active = false },
-    tabnine = { active = false },
+    hop = {active = false},
+    dial = {active = false},
+    dashboard = {active = false},
+    matchup = {active = false},
+    colorizer = {active = false},
+    numb = {active = false},
+    zen = {active = false},
+    ts_playground = {active = false},
+    indent_line = {active = false},
+    ts_context_commentstring = {active = false},
+    symbol_outline = {active = false},
+    debug = {active = false},
+    bqf = {active = false},
+    trouble = {active = false},
+    floatterm = {active = false},
+    spectre = {active = false},
+    lsp_rooter = {active = false},
+    markdown_preview = {active = false},
+    codi = {active = false},
+    telescope_fzy = {active = false},
+    sanegx = {active = false},
+    snap = {active = false},
+    ranger = {active = false},
+    todo_comments = {active = false},
+    lsp_colors = {active = false},
+    git_blame = {active = false},
+    gist = {active = false},
+    gitlinker = {active = false},
+    lazygit = {active = false},
+    octo = {active = false},
+    lush = {active = false},
+    diffview = {active = false},
+    bracey = {active = false},
+    telescope_project = {active = false},
+    dap_install = {active = false},
+    tabnine = {active = false}
   },
-
   lang = {
     python = {
       linter = "",
@@ -78,25 +75,25 @@ O = {
       autoformat = false,
       isort = false,
       diagnostics = {
-        virtual_text = { spacing = 0, prefix = "" },
+        virtual_text = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
+        underline = true
       },
       analysis = {
         type_checking = "basic",
         auto_search_paths = true,
-        use_library_code_types = true,
-      },
+        use_library_code_types = true
+      }
     },
     lua = {
       -- @usage can be 'lua-format'
       formatter = "",
       autoformat = false,
       diagnostics = {
-        virtual_text = { spacing = 0, prefix = "" },
+        virtual_text = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
-      },
+        underline = true
+      }
     },
     sh = {
       -- @usage can be 'shellcheck'
@@ -105,10 +102,10 @@ O = {
       formatter = "",
       autoformat = false,
       diagnostics = {
-        virtual_text = { spacing = 0, prefix = "" },
+        virtual_text = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
-      },
+        underline = true
+      }
     },
     tsserver = {
       -- @usage can be 'eslint'
@@ -117,20 +114,20 @@ O = {
       formatter = "prettier",
       autoformat = false,
       diagnostics = {
-        virtual_text = { spacing = 0, prefix = "" },
+        virtual_text = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
-      },
+        underline = true
+      }
     },
     json = {
       -- @usage can be 'prettier'
       formatter = "prettier",
       autoformat = true,
       diagnostics = {
-        virtual_text = { spacing = 0, prefix = "" },
+        virtual_text = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
-      },
+        underline = true
+      }
     },
     tailwindcss = {
       filetypes = {
@@ -140,66 +137,79 @@ O = {
         "javascript",
         "javascriptreact",
         "typescript",
-        "typescriptreact",
-      },
+        "typescriptreact"
+      }
     },
     clang = {
       diagnostics = {
-        virtual_text = { spacing = 0, prefix = "" },
+        virtual_text = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
+        underline = true
       },
       cross_file_rename = true,
       header_insertion = "never",
-      autoformat = false, -- update this to true for enabling autoformat
+      autoformat = false -- update this to true for enabling autoformat
     },
     ruby = {
       diagnostics = {
-        virtualtext = { spacing = 0, prefix = "" },
+        virtualtext = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
+        underline = true
       },
-      filetypes = { "rb", "erb", "rakefile", "ruby" },
+      filetypes = {"rb", "erb", "rakefile", "ruby"}
     },
     go = {},
+    cpp = {
+      diagnostics = {
+        virtual_text = {spacing = 0, prefix = ""},
+        signs = true,
+        underline = true
+      },
+      cross_file_rename = true,
+      header_insertion = "never",
+      autoformat = false -- update this to true for enabling autoformat
+    },
     elixir = {},
     vim = {},
     yaml = {},
     terraform = {},
     rust = {
       rust_tools = {
-        active = false,
+        active = true
       },
       linter = "",
       formatter = "rustfmt",
       autoformat = true,
       diagnostics = {
-        virtual_text = { spacing = 0, prefix = "" },
+        virtual_text = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
-      },
+        underline = true
+      }
     },
     svelte = {},
     php = {
       format = {
-        braces = "psr12",
+        braces = "psr12"
       },
       environment = {
-        php_version = "7.4",
+        php_version = "7.4"
       },
       autoformat = false,
       diagnostics = {
-        virtual_text = { spacing = 0, prefix = "" },
+        virtual_text = {spacing = 0, prefix = ""},
         signs = true,
-        underline = true,
+        underline = true
       },
-      filetypes = { "php", "phtml" },
+      filetypes = {"php", "phtml"}
     },
     latex = {},
     kotlin = {},
     html = {},
     elm = {},
-    emmet = { active = true },
+    markdown = {
+        formatter = "prettier"
+    },
+    emmet = {active = true},
     graphql = {},
     efm = {},
     docker = {},
@@ -208,7 +218,7 @@ O = {
     css = {
       formatter = "",
       autoformat = false,
-      virtual_text = true,
-    },
+      virtual_text = true
+    }
   }
 }

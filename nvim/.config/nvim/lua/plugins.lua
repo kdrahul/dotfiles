@@ -27,18 +27,18 @@ return require("packer").startup(
   function(use)
     use "wbthomason/packer.nvim"
 
-    use {"neovim/nvim-lspconfig"}
-    use {"glepnir/lspsaga.nvim"}
-    use {"kabouzeid/nvim-lspinstall"}
-    -- Telescope
+    -- -- Telescope
     use {"nvim-lua/popup.nvim"}
     use {"nvim-lua/plenary.nvim"}
     use {"tjdevries/astronauta.nvim"}
-    use {
-      "nvim-telescope/telescope.nvim",
-      config = [[require('thescope')]],
-      cmd = "Telescope"
-    }
+    -- use {
+    --   "nvim-telescope/telescope.nvim",
+    --   config = [[require('thescope')]],
+    --   cmd = "Telescope"
+    -- }
+    use {"neovim/nvim-lspconfig"}
+    use {"glepnir/lspsaga.nvim"}
+    use {"kabouzeid/nvim-lspinstall"}
     use {
       "hrsh7th/nvim-compe",
       config = function()
@@ -52,10 +52,11 @@ return require("packer").startup(
     -- Language addons
     use {"simrat39/rust-tools.nvim"}
     use {"mhartington/formatter.nvim"}
+    use {'rust-lang/rust.vim'}
 
     -- Markdown Preview
     -- use {"iamcco/markdown-preview.nvim", run = "-> mkdp#utils#install"}
-    use {'iamcco/markdown-preview.nvim', run = [[sh -c 'cd app && yarn install']]}
+    use {'iamcco/markdown-preview.nvim'}
 
     -- Status Line
     -- use {
@@ -65,10 +66,17 @@ return require("packer").startup(
     --   end
     -- }
 
+    -- fzf
+	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
+	use {'junegunn/fzf.vim'}
+
     -- Colorscheme
     use {"Shatur/neovim-ayu"}
+    use {'yashguptaz/calvera-dark.nvim'}
+    use {'chriskempson/base16-vim'}
 
     -- Commenter
+    -- use {'tpope/vim-commentary'}
     use "terrortylor/nvim-comment"
   end
 )

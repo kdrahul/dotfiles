@@ -100,6 +100,7 @@ fi
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 export FZF_DEFAULT_COMPLETION='rg --files --hidden --follow --ignore-global'
+export FZF_DEFAULT_OPTS='--height 40%'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export WINIT_X11_SCALE_FACTOR=1
 export WINIT_HIDPI_FACTOR=1
@@ -130,10 +131,14 @@ alias cfz="nvim ~/.zshrc"
 alias cfp="nvim ~/.config/polybar/config.ini"
 alias mocp="mocp -T green_theme"
 alias cfv="nvim ~/.config/nvim/lua/plugins.lua"
-# alias batt="cat /sys/class/power_supply/BAT0/capacity"
+alias batt="cat /sys/class/power_supply/BAT0/capacity"
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -vp"
 alias tmux="tmux -u"
 alias cfb="nvim ~/.config/bspwm/bspwmrc"
 alias cfs="nvim ~/.config/sxhkd/sxhkdrc"
+alias asdf="setxkbmap us -variant dvorak && echo 'Changed to Dvorak Layout'"
+alias aoeu="setxkbmap us && echo 'Changed to QWERTY Layout'"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

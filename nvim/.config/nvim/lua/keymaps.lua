@@ -1,16 +1,16 @@
 local map = vim.api.nvim_set_keymap
 
-map("n", "<space>", " ", {})
 vim.g.mapleader = " "
 -- Quickfix movement
 map("n", "<leader>j", ":cnext<CR>", { noremap = true, silent = true })
 map("n", "<leader>k", ":cprev<CR>", { noremap = true, silent = true })
+map("n", "<leader>c", ":cclose<CR>", { noremap = true, silent = true })
 
--- Telescope Search
-map("n", "<leader>f", ":Telescope find_files<cr>", { noremap = true, silent = true })
-map("n", "<leader>b", ":Telescope buffers<cr>", { noremap = true, silent = true })
-map("n", "<leader>r", ":Telescope live_grep<cr>", { noremap = true, silent = true })
-map("n", "<C-_>",":Telescope current_buffer_fuzzy_find<cr>", { noremap = true, silent = true })
+-- FZF Search
+map("n", "<leader>f", "<cmd>Files<cr>", { noremap = true, silent = true })
+map("n", "<leader>b", "<cmd>Buffers<cr>", { noremap = true, silent = true })
+map("n", "<leader>r", "<cmd>Rg<cr>", { noremap = true, silent = true })
+map("n", "<C-_>","<cmd>BLines<cr>", { noremap = true, silent = true })
 
 -- Other
 map("n", "H", "^", {silent = true})
@@ -26,6 +26,7 @@ map("n","gn", "<Cmd>lua vim.lsp.diagnostic.goto_next()<CR>", {noremap = true, si
 map("n","gp", "<Cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", {noremap = true, silent = true })
 map("n","<leader>a", "<Cmd>lua vim.lsp.buf.code_action()<CR>", {noremap = true, silent = true })
 map("n","<leader>e", "<Cmd>lua vim.lsp.buf.rename()<CR>", {noremap = true, silent = true })
+map("n","Q", "gq", {noremap = true, silent = true })
 
 
 -- Formatter
