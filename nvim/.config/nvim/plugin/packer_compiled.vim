@@ -72,17 +72,13 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/LuaSnip"
+  },
   ["astronauta.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/astronauta.nvim"
-  },
-  ["base16-vim"] = {
-    loaded = true,
-    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/base16-vim"
-  },
-  ["calvera-dark.nvim"] = {
-    loaded = true,
-    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/calvera-dark.nvim"
   },
   ["formatter.nvim"] = {
     loaded = true,
@@ -129,6 +125,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["omni.vim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/omni.vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/packer.nvim"
@@ -140,10 +140,6 @@ _G.packer_plugins = {
   ["popup.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
-  ["rust-tools.nvim"] = {
-    loaded = true,
-    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/rust-tools.nvim"
   },
   ["rust.vim"] = {
     loaded = true,

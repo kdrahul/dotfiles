@@ -50,13 +50,12 @@ return require("packer").startup(
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 
     -- Language addons
-    use {"simrat39/rust-tools.nvim"}
+    use {"rust-lang/rust.vim"}
     use {"mhartington/formatter.nvim"}
-    use {'rust-lang/rust.vim'}
 
     -- Markdown Preview
     -- use {"iamcco/markdown-preview.nvim", run = "-> mkdp#utils#install"}
-    use {'iamcco/markdown-preview.nvim'}
+    use {"iamcco/markdown-preview.nvim"}
 
     -- Status Line
     -- use {
@@ -67,14 +66,13 @@ return require("packer").startup(
     -- }
 
     -- fzf
-	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
-	use {'junegunn/fzf.vim'}
+    use {"junegunn/fzf", dir = "~/.fzf", run = "./install --all"}
+    use {"junegunn/fzf.vim"}
 
     -- Colorscheme
     use {"Shatur/neovim-ayu"}
-    use {'yashguptaz/calvera-dark.nvim'}
-    use {'chriskempson/base16-vim'}
-
+    use {"yonlu/omni.vim"}
+    use {"L3MON4D3/LuaSnip"}
     -- Commenter
     -- use {'tpope/vim-commentary'}
     use "terrortylor/nvim-comment"

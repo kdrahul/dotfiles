@@ -1,4 +1,3 @@
-
 ---  HELPERS  ---
 
 local cmd = vim.cmd
@@ -13,25 +12,24 @@ cmd "set iskeyword+=-"
 if O.transparent_window then
   cmd "au ColorScheme * hi Normal ctermbg=none guibg=none"
 end
-
 --- COLORSCHEME ---
 
 vim.g.colors_name = O.colorscheme
 
 ---  SETTINGS  ---
 
-opt.backup 	= false 		-- creates a backup file
-opt.clipboard 	= "unnamedplus" 	-- allows neovim to access the system clipboard
+opt.backup = false -- creates a backup file
+opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 -- opt.cmdheight 	= 2 			-- more space in the neovim command line for displaying messages
-opt.colorcolumn = "99999" 		-- fix indentline for now
-opt.completeopt = { "menuone", "noselect" }
-opt.conceallevel = 0 			-- so that `` is visible in markdown files
-opt.fileencoding = "utf-8" 		-- the encoding written to a file
-opt.guifont 	= "monospace:h26" 	-- the font used in graphical neovim applications
-opt.hidden 	= O.hidden_files 	-- required to keep multiple buffers and open multiple buffers
-opt.hlsearch 	= O.hl_search 		-- highlight all matches on previous search pattern
-opt.ignorecase 	= O.ignore_case 	-- ignore case in search patterns
---opt.mouse 	= "a" 			-- allow the mouse to be used in neovim
+-- opt.colorcolumn = "99999" -- fix indentline for now
+opt.completeopt = {"menuone", "noselect"}
+opt.conceallevel = 0 -- so that `` is visible in markdown files
+opt.fileencoding = "utf-8" -- the encoding written to a file
+-- opt.guifont = "monospace:h26" -- the font used in graphical neovim applications
+opt.hidden = O.hidden_files -- required to keep multiple buffers and open multiple buffers
+opt.hlsearch = O.hl_search -- highlight all matches on previous search pattern
+opt.ignorecase = O.ignore_case -- ignore case in search patterns
+-- opt.mouse 	= "a" 			-- allow the mouse to be used in neovim
 -- opt.pumheight = 10 -- pop up menu height
 opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
 -- opt.showtabline = 2 -- always show tabs
@@ -59,5 +57,5 @@ opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift 
 opt.wrap = O.wrap_lines -- display lines as one long line
 opt.laststatus = O.statusline -- Removes the statusline
 
-
 vim.g.create_default_mappings = false
+-- vim.g.ayu_mirage = true
