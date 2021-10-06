@@ -92,17 +92,30 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
+  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
   ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
   },
   ["neovim-ayu"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/neovim-ayu"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nightfox.nvim"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nord.nvim"
   },
   ["nvim-comment"] = {
     loaded = true,
@@ -125,10 +138,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
-  ["omni.vim"] = {
-    loaded = true,
-    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/omni.vim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/packer.nvim"
@@ -148,10 +157,21 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: markdown-preview.nvim
+time([[Setup for markdown-preview.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rmarkdown\19mkdp_filetypes\6g\bvim\0", "setup", "markdown-preview.nvim")
+time([[Setup for markdown-preview.nvim]], false)
 -- Config for: nvim-compe
 time([[Config for nvim-compe]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\vconfig\17autocomplete\frequire\0", "config", "nvim-compe")
 time([[Config for nvim-compe]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 END

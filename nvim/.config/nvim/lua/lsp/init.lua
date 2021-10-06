@@ -14,6 +14,16 @@ local commenter = {
 local fmts = {
   logging = false,
   filetype = {
+    typescript = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote"},
+          stdin = true
+        }
+      end
+    },
     javascript = {
       -- prettier
       function()
@@ -69,8 +79,9 @@ local fmts = {
       function()
         return {
           exe = "clang-format",
-          args = {},
-          stdin = true
+          args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
+          stdin = true,
+          cwd = vim.fn.expand("%:p:h")
         }
       end
     },
@@ -79,7 +90,7 @@ local fmts = {
       function()
         return {
           exe = "clang-format",
-          args = {},
+          args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
           stdin = true
         }
       end

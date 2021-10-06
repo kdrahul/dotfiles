@@ -33,3 +33,4 @@ map("n", "Q", "gq", {noremap = true, silent = true})
 
 -- Formatter
 map("n", "<leader>s", "<Cmd>Format<CR>", {noremap = true, silent = true})
+

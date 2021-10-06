@@ -58,4 +58,4 @@ opt.wrap = O.wrap_lines -- display lines as one long line
 opt.laststatus = O.statusline -- Removes the statusline
 
 vim.g.create_default_mappings = false
--- vim.g.ayu_mirage = true
+vim.g.ayu_mirage = true

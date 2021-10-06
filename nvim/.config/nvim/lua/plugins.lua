@@ -27,7 +27,7 @@ return require("packer").startup(
   function(use)
     use "wbthomason/packer.nvim"
 
-    -- -- Telescope
+    -- Telescope
     use {"nvim-lua/popup.nvim"}
     use {"nvim-lua/plenary.nvim"}
     use {"tjdevries/astronauta.nvim"}
@@ -54,8 +54,10 @@ return require("packer").startup(
     use {"mhartington/formatter.nvim"}
 
     -- Markdown Preview
+    use {"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function()
+        vim.g.mkdp_filetypes = {"markdown"}
+      end, ft = {"markdown"}}
     -- use {"iamcco/markdown-preview.nvim", run = "-> mkdp#utils#install"}
-    use {"iamcco/markdown-preview.nvim"}
 
     -- Status Line
     -- use {
@@ -71,8 +73,11 @@ return require("packer").startup(
 
     -- Colorscheme
     use {"Shatur/neovim-ayu"}
-    use {"yonlu/omni.vim"}
     use {"L3MON4D3/LuaSnip"}
+    use {"EdenEast/nightfox.nvim"}
+    use "shaunsingh/nord.nvim"
+    use "projekt0n/github-nvim-theme"
+
     -- Commenter
     -- use {'tpope/vim-commentary'}
     use "terrortylor/nvim-comment"

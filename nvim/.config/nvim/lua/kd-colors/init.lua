@@ -15,4 +15,13 @@
 --     colors = {bg = "#222222"},
 -- })
 --
-require "night"
+-- require "night"
+
+-- Nightfox Theme
+local nightfox = require('nightfox')
+
+nightfox.setup({
+    fox = "nightfox"
+})
+
+nightfox.load()
