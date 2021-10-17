@@ -56,6 +56,7 @@ opt.relativenumber = O.relative_number -- set relative numbered lines
 opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
 opt.wrap = O.wrap_lines -- display lines as one long line
 opt.laststatus = O.statusline -- Removes the statusline
+opt.guicursor = ''
 
 vim.g.create_default_mappings = false
 vim.g.ayu_mirage = true
