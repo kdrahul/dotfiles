@@ -9,3 +9,4 @@ require("lsp")
 -- require("kd-colors")
 
 require("snips")
+require("popup")

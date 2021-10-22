@@ -22,7 +22,7 @@ opt.backup = false -- creates a backup file
 opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 -- opt.cmdheight 	= 2 			-- more space in the neovim command line for displaying messages
 -- opt.colorcolumn = "99999" -- fix indentline for now
-opt.completeopt = {"menuone", "noselect"}
+opt.completeopt = {"menu", "menuone", "noselect"}
 opt.conceallevel = 0 -- so that `` is visible in markdown files
 opt.fileencoding = "utf-8" -- the encoding written to a file
 -- opt.guifont = "monospace:h26" -- the font used in graphical neovim applications
@@ -56,7 +56,7 @@ opt.relativenumber = O.relative_number -- set relative numbered lines
 opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
 opt.wrap = O.wrap_lines -- display lines as one long line
 opt.laststatus = O.statusline -- Removes the statusline
-opt.guicursor = ''
+opt.guicursor = ""
 
 vim.g.create_default_mappings = false
 vim.g.ayu_mirage = true

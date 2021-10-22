@@ -20,13 +20,12 @@ M.config = function()
     max_kind_width = 100,
     max_menu_width = 100,
     documentation = true,
-
     source = {
-      path = { kind = "   (Path)" },
-      buffer = { kind = "   (Buffer)" },
-      calc = { kind = "   (Calc)" },
+      path = {kind = "   (Path)"},
+      buffer = {kind = "   (Buffer)"},
+      calc = {kind = "   (Calc)"},
       -- vsnip = { kind = "   (Snippet)" },
-      nvim_lsp = { kind = "   (LSP)" },
+      nvim_lsp = {kind = "   (LSP)"},
       nvim_lua = {kind = "  "},
       nvim_lua = true,
       -- spell = { kind = "   (Spell)" },
@@ -34,14 +33,14 @@ M.config = function()
       -- vim_dadbod_completion = true,
       -- snippets_nvim = {kind = "  "},
       -- ultisnips = {kind = "  "},
-      treesitter = {kind = "  "},
+      treesitter = {kind = "  "}
       -- emoji = { kind = " ﲃ  (Emoji)", filetypes = { "markdown", "text" } },
       -- for emoji press : (idk if that in compe tho)
-    },
+    }
   }
 
   -- if O.plugin.tabnine.active then
-    -- opt.source.tabnine = { kind = " ", priority = 200, max_reslts = 6 }
+  -- opt.source.tabnine = { kind = " ", priority = 200, max_reslts = 6 }
   -- end
 
   require("compe").setup(opt)
@@ -59,11 +58,11 @@ M.config = function()
     end
   end
 
-  vim.api.nvim_set_keymap("i", "<C-Space>", "compe#complete()", { noremap = true, silent = true, expr = true })
-  vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", { noremap = true, silent = true, expr = true })
-  vim.api.nvim_set_keymap("i", "<C-e>", "compe#close('<C-e>')", { noremap = true, silent = true, expr = true })
-  vim.api.nvim_set_keymap("i", "<C-f>", "compe#scroll({ 'delta': +4 })", { noremap = true, silent = true, expr = true })
-  vim.api.nvim_set_keymap("i", "<C-d>", "compe#scroll({ 'delta': -4 })", { noremap = true, silent = true, expr = true })
+  vim.api.nvim_set_keymap("i", "<C-Space>", "compe#complete()", {noremap = true, silent = true, expr = true})
+  vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", {noremap = true, silent = true, expr = true})
+  vim.api.nvim_set_keymap("i", "<C-e>", "compe#close('<C-e>')", {noremap = true, silent = true, expr = true})
+  vim.api.nvim_set_keymap("i", "<C-f>", "compe#scroll({ 'delta': +4 })", {noremap = true, silent = true, expr = true})
+  vim.api.nvim_set_keymap("i", "<C-d>", "compe#scroll({ 'delta': -4 })", {noremap = true, silent = true, expr = true})
 end
 
 return M

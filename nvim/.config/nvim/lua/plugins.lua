@@ -8,6 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute "packadd packer.nvim"
 end
 
+
 local packer_ok, packer = pcall(require, "packer")
 if not packer_ok then
   return
@@ -39,12 +40,18 @@ return require("packer").startup(
     use {"neovim/nvim-lspconfig"}
     use {"glepnir/lspsaga.nvim"}
     use {"kabouzeid/nvim-lspinstall"}
-    use {
-      "hrsh7th/nvim-compe",
-      config = function()
-        require("autocomplete").config()
-      end
-    }
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/nvim-cmp"
+    use "saadparwaiz1/cmp_luasnip"
+    use "onsails/lspkind-nvim"
+    -- use {
+    --   "hrsh7th/nvim-compe",
+    --   config = function()
+    --     require("autocomplete").config()
+    --   end
+    -- }
 
     -- Treesitter
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -54,10 +61,14 @@ return require("packer").startup(
     use {"mhartington/formatter.nvim"}
 
     -- Markdown Preview
-    use {"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function()
+    use {
+      "iamcco/markdown-preview.nvim",
+      run = "cd app && npm install",
+      setup = function()
         vim.g.mkdp_filetypes = {"markdown"}
-      end, ft = {"markdown"}}
-    -- use {"iamcco/markdown-preview.nvim", run = "-> mkdp#utils#install"}
+      end,
+      ft = {"markdown"}
+    }
 
     -- Status Line
     -- use {
@@ -67,7 +78,7 @@ return require("packer").startup(
     --   end
     -- }
 
-    -- fzf
+    -- FZF
     use {"junegunn/fzf", dir = "~/.fzf", run = "./install --all"}
     use {"junegunn/fzf.vim"}
 
@@ -78,8 +89,8 @@ return require("packer").startup(
     use "shaunsingh/nord.nvim"
     use "projekt0n/github-nvim-theme"
 
+
     -- Commenter
-    -- use {'tpope/vim-commentary'}
     use "terrortylor/nvim-comment"
   end
 )
