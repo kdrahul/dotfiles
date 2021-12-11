@@ -2,24 +2,37 @@ modkey = "Mod4"
 mousekey = "Mod4"
 workspaces = []
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
+layouts = ["MainAndVertStack","CenterMainBalanced"]
 layout_mode = "Workspace"
 scratchpad = []
-disable_current_tag_swap = false
+disable_current_tag_swap = true
 focus_behaviour = "Sloppy"
 focus_new_windows = true
+height = 1920
+width = 1080
+
+[[keybind]]
+command = "ToggleFullScreen"
+modifier = ["modkey"]
+key = "f"
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run"
+value = "scr"
+modifier = ["modkey", "Shift"]
+key = "s"
+
+[[keybind]]
+command = "Execute"
+value = "dmenu_run -nf '#CBCCC6' -nb '#1F2430' -sb '#334153' -sf '#EEEEEE' -fn 'monospace-12' -p 'menu:'"
 modifier = ["modkey"]
 key = "d"
 
 [[keybind]]
 command = "Execute"
 value = "kitty"
-modifier = ["modkey", "Shift"]
-key = "Return"
+modifier = ["modkey"]
+key = "n"
 
 [[keybind]]
 command = "CloseWindow"
@@ -29,6 +42,11 @@ key = "q"
 [[keybind]]
 command = "SoftReload"
 modifier = ["modkey", "Shift"]
+key = "r"
+
+[[keybind]]
+command = "HardReload"
+modifier = ["modkey", "Control"]
 key = "r"
 
 [[keybind]]
@@ -46,12 +64,12 @@ key = "l"
 [[keybind]]
 command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
-key = "w"
+key = "Tab"
 
 [[keybind]]
 command = "SwapTags"
 modifier = ["modkey"]
-key = "w"
+key = "Tab"
 
 [[keybind]]
 command = "MoveWindowUp"
