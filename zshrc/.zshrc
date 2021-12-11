@@ -75,7 +75,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions virtualenv colored-man-pages autoswitch_virtualenv)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,9 +106,10 @@ fi
 
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
-export FZF_DEFAULT_COMPLETION='rg --files --hidden --follow --ignore-global'
+export FZF_DEFAULT_COMPLETION='rg --files --hidden --follow --no-ignore-vcs '
 export FZF_DEFAULT_OPTS='--height 40%'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 export WINIT_X11_SCALE_FACTOR=1
 export WINIT_HIDPI_FACTOR=1
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
@@ -138,14 +139,14 @@ alias cfa="nvim ~/.config/alacritty/alacritty.yml"
 alias cfz="nvim ~/.zshrc"
 alias cfp="nvim ~/.config/polybar/config.ini"
 alias mocp="mocp -T green_theme"
-alias cfv="nvim ~/.config/nvim/lua/plugins.lua"
+# alias cfv="nvim ~/.config/nvim/lua/plugins.lua"
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -vp"
 alias tmux="tmux -u"
-alias cfb="nvim ~/.config/bspwm/bspwmrc"
-alias cfs="nvim ~/.config/sxhkd/sxhkdrc"
+# alias cfb="nvim ~/.config/bspwm/bspwmrc"
+# alias cfs="nvim ~/.config/sxhkd/sxhkdrc"
 alias asdf="setxkbmap us -variant dvorak && echo 'Changed to Dvorak Layout'"
 alias aoeu="setxkbmap us && echo 'Changed to QWERTY Layout'"
 

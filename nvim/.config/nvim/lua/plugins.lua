@@ -37,15 +37,18 @@ return require("packer").startup(
     --   config = [[require('thescope')]],
     --   cmd = "Telescope"
     -- }
-    use {"neovim/nvim-lspconfig"}
+    use {"neovim/nvim-lspconfig",'williamboman/nvim-lsp-installer'}
     use {"glepnir/lspsaga.nvim"}
-    use {"kabouzeid/nvim-lspinstall"}
+    -- use {"kabouzeid/nvim-lspinstall"}
+
+    -- Popup Stuff
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-path"
     use "hrsh7th/nvim-cmp"
     use "saadparwaiz1/cmp_luasnip"
     use "onsails/lspkind-nvim"
+
     -- use {
     --   "hrsh7th/nvim-compe",
     --   config = function()
@@ -69,6 +72,7 @@ return require("packer").startup(
       end,
       ft = {"markdown"}
     }
+
 
     -- Status Line
     -- use {

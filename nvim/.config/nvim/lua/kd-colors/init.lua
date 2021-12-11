@@ -1,12 +1,12 @@
--- require("ayu").setup(
---   {
---     -- themeStyle = "dark", -- Because Dark is defaiult
---     -- @values : NONE, Italic
---     commentStyle = "italic",
---     functionStyle = "bold",
---     keywordStyle = "NONE"
---   }
--- )
+require("ayu").setup(
+  {
+    themeStyle = "mirage", -- Because Dark is defaiult
+    -- @values : NONE, Italic
+    commentStyle = "italic",
+    functionStyle = "bold",
+    keywordStyle = "NONE"
+  }
+)
 --
 -- require('onedark').setup({
 --     commentStyle = "italic",
@@ -15,13 +15,16 @@
 --     colors = {bg = "#222222"},
 -- })
 --
+
 -- require "night"
 
 -- Nightfox Theme
-local nightfox = require('nightfox')
+-- local nightfox = require('nightfox')
+-- 
+-- nightfox.setup({
+--     fox = "nordfox"
+-- })
+-- 
+-- nightfox.load()
 
-nightfox.setup({
-    fox = "nightfox"
-})
-
-nightfox.load()
+-- Ayu Mirage

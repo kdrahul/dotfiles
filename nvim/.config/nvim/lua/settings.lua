@@ -14,7 +14,7 @@ if O.transparent_window then
 end
 --- COLORSCHEME ---
 
-vim.g.colors_name = O.colorscheme
+cmd "colorscheme ayu-mirage"
 
 ---  SETTINGS  ---
 
@@ -31,7 +31,7 @@ opt.hlsearch = O.hl_search -- highlight all matches on previous search pattern
 opt.ignorecase = O.ignore_case -- ignore case in search patterns
 -- opt.mouse 	= "a" 			-- allow the mouse to be used in neovim
 -- opt.pumheight = 10 -- pop up menu height
-opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
+opt.showmode = true -- we don't need to see things like -- INSERT -- anymore
 -- opt.showtabline = 2 -- always show tabs
 opt.smartcase = O.smart_case -- smart case
 opt.smartindent = true -- make indenting smarter again
@@ -53,10 +53,10 @@ opt.tabstop = 4 -- insert 4 spaces for a tab
 -- opt.cursorline = O.cursorline -- highlight the current line
 opt.number = O.number -- set numbered lines
 opt.relativenumber = O.relative_number -- set relative numbered lines
-opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
+opt.signcolumn = "no" -- always show the sign column, otherwise it would shift the text each time
 opt.wrap = O.wrap_lines -- display lines as one long line
 opt.laststatus = O.statusline -- Removes the statusline
 opt.guicursor = ""
 
 vim.g.create_default_mappings = false
-vim.g.ayu_mirage = true
+-- vim.g.ayu_mirage = true

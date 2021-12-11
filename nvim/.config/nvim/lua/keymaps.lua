@@ -33,7 +33,3 @@ map("n", "Q", "gq", {noremap = true, silent = true})
 
 -- Formatter
 map("n", "<leader>s", "<Cmd>Format<CR>", {noremap = true, silent = true})
-
--- Snippets
-map("i", "<leader>l", "v:lua.tab_complete()", {expr = true})
-map("s", "<leader>l", "v:lua.tab_complete()", {expr = true})

@@ -30,8 +30,8 @@ set incsearch
 set ttimeoutlen=10
 set laststatus=0
 "set colorcolumn=80
-set nu
-set rnu
+" set nu
+" set rnu
 
 set bg="dark"
 

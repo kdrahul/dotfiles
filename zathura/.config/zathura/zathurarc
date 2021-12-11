@@ -31,73 +31,45 @@
 # set recolor-lightcolor          "#2e3440"
 # set recolor-darkcolor           "#d8dee9"
 
-# Base16 Atelier Dune
-# Author: Bram de Haan (http://atelierbramdehaan.nl)
 
-#set default-bg                  "#20201d"
-#set default-fg                  "#292824"
-#
-#set statusbar-fg                "#999580"
-#set statusbar-bg                "#6e6b5e"
-#
-#set inputbar-bg                 "#20201d"
-#set inputbar-fg                 "#fefbec"
-#
-#set notification-bg             "#20201d" set notification-fg             "#fefbec" set notification-error-bg       "#20201d"
-#set notification-error-fg       "#d73737"
-#
-#set notification-warning-bg     "#20201d"
-#set notification-warning-fg     "#d73737"
-# set highlight-color             "#ae9513" set highlight-active-color      "#6684e1"
-#
-#set completion-bg               "#292824"
-#set completion-fg               "#6684e1"
-#
-#set completion-highlight-fg     "#fefbec"
-#set completion-highlight-bg     "#6684e1"
-#
-#set recolor-lightcolor          "#20201d"
-#set recolor-darkcolor           "#e8e4cf"
-#
-#set recolor-keephue             "false"
+###############################################################################
 
 # Base16 Nord
 # Author: arcticicestudio
 
-set default-bg                  "#2E3440"
-set default-fg                  "#3B4252"
+# set default-bg                  "#2E3440"
+# set default-fg                  "#3B4252"
+# 
+# set statusbar-fg                "#D8DEE9"
+# set statusbar-bg                "#434C5E"
+# 
+# set inputbar-bg                 "#2E3440"
+# set inputbar-fg                 "#8FBCBB"
+# 
+# set notification-bg             "#2E3440"
+# set notification-fg             "#8FBCBB"
+# 
+# set notification-error-bg       "#2E3440"
+# set notification-error-fg       "#BF616A"
+# 
+# set notification-warning-bg     "#2E3440"
+# set notification-warning-fg     "#BF616A"
+# 
+# set highlight-color             "#EBCB8B"
+# set highlight-active-color      "#81A1C1"
+# 
+# set completion-bg               "#3B4252"
+# set completion-fg               "#81A1C1"
+# 
+# set completion-highlight-fg     "#8FBCBB"
+# set completion-highlight-bg     "#81A1C1"
+# 
+# set recolor-lightcolor          "#2E3440"
+# set recolor-darkcolor           "#ECEFF4"
+# 
+# set recolor                     "true"
+# set recolor-keephue             "false"
 
-set statusbar-fg                "#D8DEE9"
-set statusbar-bg                "#434C5E"
-
-set inputbar-bg                 "#2E3440"
-set inputbar-fg                 "#8FBCBB"
-
-set notification-bg             "#2E3440"
-set notification-fg             "#8FBCBB"
-
-set notification-error-bg       "#2E3440"
-set notification-error-fg       "#BF616A"
-
-set notification-warning-bg     "#2E3440"
-set notification-warning-fg     "#BF616A"
-
-set highlight-color             "#EBCB8B"
-set highlight-active-color      "#81A1C1"
-
-set completion-bg               "#3B4252"
-set completion-fg               "#81A1C1"
-
-set completion-highlight-fg     "#8FBCBB"
-set completion-highlight-bg     "#81A1C1"
-
-set recolor-lightcolor          "#2E3440"
-set recolor-darkcolor           "#ECEFF4"
-
-set recolor                     "true"
-set recolor-keephue             "false"
-
-###############################################################################
 ###############################################################################
 
 # Base16 Tomorrow Night
@@ -209,6 +181,46 @@ set recolor-keephue             "false"
 # 
 # set recolor                     "true"
 # set recolor-keephue             "false"
+
+################################################################################
+
+# Ayu-mirage
+# Author: Lalit Magant (http://github.com/tilal6991)
+
+set default-bg                  "#1F2430"
+set default-fg                  "#CBCCC6"
+
+set statusbar-fg                "#CBCCC6"
+set statusbar-bg                "#1e222a"
+
+set inputbar-bg                 "#1F2430"
+set inputbar-fg                 "#CBCCC6"
+
+set notification-bg             "#1F2430"
+set notification-fg             "#CBCCC6"
+
+set notification-error-bg       "#1F2430"
+set notification-error-fg       "#e06c75"
+
+set notification-warning-bg     "#1F2430"
+set notification-warning-fg     "#e06c75"
+
+set highlight-color             "#e5c07b"
+set highlight-active-color      "#61afef"
+
+set completion-bg               "#353b45"
+set completion-fg               "#61afef"
+
+set completion-highlight-fg     "#CBCCC6"
+set completion-highlight-bg     "#61afef"
+
+set recolor-lightcolor          "#1f2430"
+set recolor-darkcolor           "#CBCCC6"
+
+set recolor                     "true"
+set recolor-keephue             "false"
+
 ################################################################################
 
 set selection-clipboard clipboard
+

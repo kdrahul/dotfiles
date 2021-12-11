@@ -107,12 +107,34 @@ local fmts = {
     }
   }
 }
-
+local function config(_config)
+	return vim.tbl_deep_extend("force", {
+		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	}, _config or {})
+end
 require("lspconfig").tsserver.setup({})
-require("lspconfig").ccls.setup({})
-require("lspconfig").rust_analyzer.setup({})
-require("lspconfig").sumneko_lua.setup({})
+-- require("lspconfig").ccls.setup(config())
+require("lspconfig").rust_analyzer.setup(config({
+        cmd = { "rustup", "run", "nightly", "rust-analyzer"},
+}))
+-- require("lspconfig").sumneko_lua.setup({})
 require("lspconfig").pyright.setup({})
 require("nvim_comment").setup(commenter)
-
 require("formatter").setup(fmts)
+
+local lsp_installer = require("nvim-lsp-installer")
+
+-- Register a handler that will be called for all installed servers.
+-- Alternatively, you may also register handlers on specific server instances instead (see example below).
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
+
+    -- This setup() function is exactly the same as lspconfig's setup function.
+    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+    server:setup(opts)
+end)
