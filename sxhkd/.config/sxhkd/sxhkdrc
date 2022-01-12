@@ -3,8 +3,8 @@
 #
 
 # terminal emulator
-super + Return
-	st
+super + n
+	kitty
 
 # terminal emulator
 super + r
@@ -12,7 +12,7 @@ super + r
 
 # program launcher
 super + space
-	dmenu_run
+  dmenu_run -nf '#CBCCC6' -nb '#1F2430' -sb '#334153' -sf '#f0f0f0' -fn 'monospace-12' -p 'menu:'
 
 # make sxhkd reload its configuration files:
 super + Escape

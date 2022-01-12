@@ -27,12 +27,12 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # fi
 
 # Launch bar
-polybar --config=/home/rdk/.config/polybar/config.ini --reload main & 
+polybar --config=~/.config/polybar/config.ini --reload main & 
 
-external_monitor=$(xrandr --query | grep 'HDMI-1')
-if [[ $external_monitor = *connected* ]] ; then
-    polybar --config=/home/rdk/.config/polybar/config.ini --reload top_external &
-fi
+# external_monitor=$(xrandr --query | grep 'HDMI-1')
+# if [[ $external_monitor = *connected* ]] ; then
+#     polybar --config=/home/rdk/.config/polybar/config.ini --reload top_external &
+# fi
 
 # polybar --config=/home/rdk/.config/polybar/config.ini main &
 # polybar --config=/home/rdk/.config/polybar/config.ini top_external &

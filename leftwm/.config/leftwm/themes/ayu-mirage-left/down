@@ -7,5 +7,6 @@ feh --bg-scale "$SCRIPTPATH"/down.jpg
 
 leftwm command "UnloadTheme"
 
-pkill compton 
+pkill picom 
 pkill polybar
+pkill pulseaudio

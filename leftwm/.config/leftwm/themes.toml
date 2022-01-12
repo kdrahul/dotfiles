@@ -12,12 +12,12 @@ current = false
 
 [[repos.themes]]
 name = "Coffee"
-directory = "/home/rdk/.config/leftwm/themes/Coffee"
+directory = "$HOME/.config/leftwm/themes/Coffee"
 repository = "https://github.com/lex148/leftwm-coffee/"
 commit = "*"
 version = "0.0.1"
 leftwm_versions = "*"
-current = false
+current = true
 
 [[repos.themes]]
 name = "Soothe"
@@ -46,7 +46,7 @@ current = false
 
 [[repos.themes]]
 name = "Dracula Rounded"
-directory = "/home/rdk/.config/leftwm/themes/Dracula Rounded"
+directory = "$HOME/.config/leftwm/themes/Dracula Rounded"
 repository = "https://github.com/AethanFoot/leftwm-theme-dracula-rounded/"
 commit = "*"
 version = "0.0.2"
@@ -71,7 +71,7 @@ current = false
 
 [[repos.themes]]
 name = "Red Moon"
-directory = "/home/rdk/.config/leftwm/themes/Red Moon"
+directory = "$HOME/.config/leftwm/themes/Red Moon"
 repository = "https://github.com/Qwart376/Red-Moon"
 commit = "*"
 version = "0.0.1"
@@ -148,14 +148,14 @@ name = "LOCAL"
 
 [[repos.themes]]
 name = "ayu-mirage"
-directory = "/home/rdk/.config/leftwm/themes/ayu-mirage"
+directory = "$HOME/.config/leftwm/themes/ayu-mirage"
 version = "0.0.0"
 leftwm_versions = "*"
 current = false
 
 [[repos.themes]]
 name = "ayu-mirage-left"
-directory = "/home/rdk/.config/leftwm/themes/ayu-mirage-left"
+directory = "$HOME/.config/leftwm/themes/ayu-mirage-left"
 version = "0.0.0"
 leftwm_versions = "*"
-current = true
+current = false
