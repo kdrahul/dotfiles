@@ -5,16 +5,19 @@ pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc -m 1 &
 xset r rate 225 150
 setxkbmap -option ctrl:nocaps
 
+feh --bg-scale $HOME/Pictures/Wallpapers/grey_mountain.jpg
 picom -b
-feh --bg-scale $HOME/Pictures/Wallpapers/Night_Sky_Greyscale.jpg
 
 bash ~/.config/polybar/launch.sh
-sh /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
+/usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
+
 bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width                  1
 bspc config focused_border_color          "#FFB454"
 bspc config window_gap                    8
+bspc config focus_follow_pointer          true
+
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -23,3 +26,4 @@ bspc config gapless_monocle      true
 bspc rule -a Gimp desktop='^7' state=floating follow=on
 bspc rule -a Teams desktop='^4'
 bspc rule -a Firefox desktop='^10' follow=on
+bspc rule -a nautilus desktop='^3' follow=on

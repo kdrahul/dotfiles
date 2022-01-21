@@ -10,13 +10,20 @@ super + n
 super + r
 	alacritty
 
+# Screenshot
+super + shift + s
+  scr
+
 # program launcher
-super + space
+super + d
   dmenu_run -nf '#CBCCC6' -nb '#1F2430' -sb '#334153' -sf '#f0f0f0' -fn 'monospace-12' -p 'menu:'
 
+super + space
+  rofi -show run
+
 # make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+# super + Escape
+# 	pkill -USR1 -x sxhkd
 
 # Browser
 super + w

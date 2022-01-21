@@ -17,9 +17,6 @@
 #######################################
 # BSPWM 
 #######################################
-/usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
-pulseaudio --start
 exec bspwm
-# exec dbus-launch leftwm

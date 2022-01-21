@@ -142,13 +142,13 @@ local function config(_config)
 		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
 	}, _config or {})
 end
-require("lspconfig").tsserver.setup({})
+-- require("lspconfig").tsserver.setup({})
 -- require("lspconfig").ccls.setup(config())
-require("lspconfig").rust_analyzer.setup(config({
-        cmd = { "rustup", "run", "nightly", "rust-analyzer"},
-}))
+-- require("lspconfig").rust_analyzer.setup(config({
+--         cmd = { "rustup", "run", "nightly", "rust-analyzer"},
+-- }))
 -- require("lspconfig").sumneko_lua.setup({})
-require("lspconfig").pyright.setup({})
+-- require("lspconfig").pyright.setup({})
 require("nvim_comment").setup(commenter)
 require("formatter").setup(fmts)
 
