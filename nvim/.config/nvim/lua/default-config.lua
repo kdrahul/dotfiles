@@ -4,7 +4,7 @@ TERMINAL = vim.fn.expand "$TERM"
 
 O = {
   auto_close_tree = 0,
-  auto_complete = true,
+  auto_complete = false,
   hidden_files = true,
   wrap_lines = false,
   number = true,
@@ -20,6 +20,7 @@ O = {
   hl_search = false,
   transparent_window = false,
   leader_key = "space",
+  tabline = false,
   -- @usage pass a table with your desired languages
   treesitter = {
     ensure_installed = "all",

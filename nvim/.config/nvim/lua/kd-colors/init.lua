@@ -1,6 +1,6 @@
 require("ayu").setup(
   {
-    themeStyle = "mirage", -- Because Dark is defaiult
+    themeStyle = "mirage", -- Because Dark is default
     -- @values : NONE, Italic
     commentStyle = "italic",
     functionStyle = "bold",
