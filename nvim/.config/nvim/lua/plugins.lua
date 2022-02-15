@@ -32,14 +32,8 @@ return require("packer").startup(
     use {"nvim-lua/popup.nvim"}
     use {"nvim-lua/plenary.nvim"}
     use {"tjdevries/astronauta.nvim"}
-    -- use {
-    --   "nvim-telescope/telescope.nvim",
-    --   config = [[require('thescope')]],
-    --   cmd = "Telescope"
-    -- }
     use {"neovim/nvim-lspconfig",'williamboman/nvim-lsp-installer'}
     use {"glepnir/lspsaga.nvim"}
-    -- use {"kabouzeid/nvim-lspinstall"}
 
     -- Popup Stuff
     use "hrsh7th/cmp-nvim-lsp"
@@ -73,14 +67,11 @@ return require("packer").startup(
       ft = {"markdown"}
     }
 
-
     -- Status Line
-    -- use {
-    --   "hoob3rt/lualine.nvim",
-    --   config = function()
-    --     require("statusline").config()
-    --   end
-    -- }
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
     -- FZF
     use {"junegunn/fzf", dir = "~/.fzf", run = "./install --all"}
@@ -92,7 +83,6 @@ return require("packer").startup(
     use {"EdenEast/nightfox.nvim"}
     use "shaunsingh/nord.nvim"
     use "projekt0n/github-nvim-theme"
-
 
     -- Commenter
     use "terrortylor/nvim-comment"

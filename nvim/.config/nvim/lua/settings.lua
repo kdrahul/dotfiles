@@ -9,9 +9,9 @@ cmd "filetype plugin on"
 cmd('let &titleold="' .. TERMINAL .. '"')
 cmd "set inccommand=split"
 cmd "set iskeyword+=-"
-if O.transparent_window then
-  cmd "au ColorScheme * hi Normal ctermbg=none guibg=none"
-end
+-- if O.transparent_window then
+--   cmd "au ColorScheme * hi Normal ctermbg=none guibg=none"
+-- end
 --- COLORSCHEME ---
 
 -- cmd "colorscheme ayu-mirage"
@@ -21,7 +21,7 @@ end
 opt.backup = false -- creates a backup file
 opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 -- opt.cmdheight 	= 2 			-- more space in the neovim command line for displaying messages
--- opt.colorcolumn = "99999" -- fix indentline for now
+opt.colorcolumn = "99999" -- fix indentline for now
 opt.completeopt = {"menu", "menuone", "noselect"}
 opt.conceallevel = 0 -- so that `` is visible in markdown files
 opt.fileencoding = "utf-8" -- the encoding written to a file
@@ -30,7 +30,7 @@ opt.hidden = O.hidden_files -- required to keep multiple buffers and open multip
 opt.hlsearch = O.hl_search -- highlight all matches on previous search pattern
 opt.ignorecase = O.ignore_case -- ignore case in search patterns
 -- opt.mouse 	= "a" 			-- allow the mouse to be used in neovim
--- opt.pumheight = 10 -- pop up menu height
+opt.pumheight = 10 -- pop up menu height
 opt.showmode = true -- we don't need to see things like -- INSERT -- anymore
 -- opt.showtabline = O.tabline -- always show tabs
 opt.smartcase = O.smart_case -- smart case
@@ -50,12 +50,13 @@ opt.expandtab = true -- convert tabs to spaces
 opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 opt.shortmess:append "c"
 opt.tabstop = 2 -- insert 4 spaces for a tab
-opt.cursorline = O.cursorline -- highlight the current line
+opt.cursorline = true -- highlight the current line
+opt.cursorlineopt = "number"
 opt.number = O.number -- set numbered lines
 opt.relativenumber = O.relative_number -- set relative numbered lines
 opt.signcolumn = "no" -- always show the sign column, otherwise it would shift the text each time
 opt.wrap = O.wrap_lines -- display lines as one long line
-opt.laststatus = O.statusline -- Removes the statusline
+opt.laststatus = 0 -- Removes the statusline
 opt.guicursor = ""
 
 vim.g.create_default_mappings = false
