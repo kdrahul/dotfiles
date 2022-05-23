@@ -11,6 +11,12 @@ local function copy(args)
   return args[1]
 end
 
+ls.config.set_config {
+  history = true,
+  updateevents = "TextChanged, TextChangedI",
+  enable_autosnippets = true,
+}
+
 -- Contains snippets
 ls.snippets = {
   -- Applicable to all file types

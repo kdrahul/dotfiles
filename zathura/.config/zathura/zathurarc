@@ -219,6 +219,43 @@ set recolor-darkcolor           "#CBCCC6"
 
 set recolor                     "true"
 set recolor-keephue             "false"
+################################################################################
+
+# Tokyo Night
+# Author: Lalit Magant (http://github.com/tilal6991)
+
+set default-bg                  "#1F2430"
+set default-fg                  "#CBCCC6"
+
+set statusbar-fg                "#CBCCC6"
+set statusbar-bg                "#1e222a"
+
+set inputbar-bg                 "#1F2430"
+set inputbar-fg                 "#CBCCC6"
+
+set notification-bg             "#1F2430"
+set notification-fg             "#CBCCC6"
+
+set notification-error-bg       "#1F2430"
+set notification-error-fg       "#e06c75"
+
+set notification-warning-bg     "#1F2430"
+set notification-warning-fg     "#e06c75"
+
+set highlight-color             "#e5c07b"
+set highlight-active-color      "#61afef"
+
+set completion-bg               "#353b45"
+set completion-fg               "#61afef"
+
+set completion-highlight-fg     "#CBCCC6"
+set completion-highlight-bg     "#61afef"
+
+set recolor-lightcolor          "#1f2430"
+set recolor-darkcolor           "#CBCCC6"
+
+set recolor                     "true"
+set recolor-keephue             "false"
 
 ################################################################################
 

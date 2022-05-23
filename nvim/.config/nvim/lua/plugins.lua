@@ -31,7 +31,7 @@ return require("packer").startup(
     -- Telescope
     use {"nvim-lua/popup.nvim"}
     use {"nvim-lua/plenary.nvim"}
-    use {"tjdevries/astronauta.nvim"}
+    -- use {"tjdevries/astronauta.nvim"}
     use {"neovim/nvim-lspconfig",'williamboman/nvim-lsp-installer'}
     use {"glepnir/lspsaga.nvim"}
 
@@ -83,7 +83,9 @@ return require("packer").startup(
     use {"EdenEast/nightfox.nvim"}
     use "shaunsingh/nord.nvim"
     use "projekt0n/github-nvim-theme"
-
+    use "rafamadriz/neon"
+    use 'folke/tokyonight.nvim'
+    use { 'rktjmp/lush.nvim' }
     -- Commenter
     use "terrortylor/nvim-comment"
   end

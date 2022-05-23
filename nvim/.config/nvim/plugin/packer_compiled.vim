@@ -77,11 +77,6 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["astronauta.nvim"] = {
-    loaded = true,
-    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/astronauta.nvim",
-    url = "https://github.com/tjdevries/astronauta.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -137,12 +132,22 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  neon = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/neon",
+    url = "https://github.com/rafamadriz/neon"
   },
   ["neovim-ayu"] = {
     loaded = true,
@@ -208,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   }
 }
 

@@ -19,6 +19,7 @@ map("n", "<c-j>", "<Esc>", {noremap = true, silent = true})
 map("i", "<c-j>", "<Esc>", {noremap = true, silent = true})
 map("v", "<c-j>", "<Esc>", {noremap = true, silent = true})
 map("n", "<leader>g", "<C-^>", {noremap = true, silent = true})
+map("n", "<leader>h", "<cmd>nohls<CR>", {noremap = true, silent = true})
 
 -- LSP bindings
 map("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true, silent = true})
