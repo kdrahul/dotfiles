@@ -97,6 +97,11 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["colorbuddy.vim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/colorbuddy.vim",
+    url = "https://github.com/tjdevries/colorbuddy.vim"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/formatter.nvim",
@@ -116,6 +121,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
+  },
+  ["gruvbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim",
+    url = "https://github.com/tjdevries/gruvbuddy.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -194,6 +204,11 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  nvim_colors = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim_colors",
+    url = "https://github.com/kdrahul/nvim_colors"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -213,6 +228,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
+  },
+  ["snazzybuddy.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/snazzybuddy.nvim",
+    url = "https://github.com/bbenzikry/snazzybuddy.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

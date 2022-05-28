@@ -4,7 +4,6 @@ require("settings")
 require("keymaps")
 
 require("nvim-treesitter.configs").setup{highlight = {enable = true}}
-
 require("lsp")
 require("snips")
 require("popup")

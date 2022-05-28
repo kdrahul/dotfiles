@@ -78,6 +78,12 @@ return require("packer").startup(
     use {"junegunn/fzf.vim"}
 
     -- Colorscheme
+
+    use "tjdevries/colorbuddy.vim"
+    use "tjdevries/gruvbuddy.nvim"
+    use 'Th3Whit3Wolf/onebuddy'
+    use 'bbenzikry/snazzybuddy.nvim'
+    use 'kdrahul/nvim_colors'
     use {"Shatur/neovim-ayu"}
     use {"L3MON4D3/LuaSnip"}
     use {"EdenEast/nightfox.nvim"}
@@ -86,6 +92,7 @@ return require("packer").startup(
     use "rafamadriz/neon"
     use 'folke/tokyonight.nvim'
     use { 'rktjmp/lush.nvim' }
+
     -- Commenter
     use "terrortylor/nvim-comment"
   end
