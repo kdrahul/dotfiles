@@ -77,34 +77,34 @@
 
 # set default-bg                  "#1d1f21"
 # set default-fg                  "#282a2e"
-# 
+#
 # set statusbar-fg                "#b4b7b4"
 # set statusbar-bg                "#373b41"
-# 
+#
 # set inputbar-bg                 "#1d1f21"
 # set inputbar-fg                 "#ffffff"
-# 
+#
 # set notification-bg             "#1d1f21"
 # set notification-fg             "#ffffff"
-# 
+#
 # set notification-error-bg       "#1d1f21"
 # set notification-error-fg       "#cc6666"
-# 
+#
 # set notification-warning-bg     "#1d1f21"
 # set notification-warning-fg     "#cc6666"
-# 
+#
 # set highlight-color             "#f0c674"
 # set highlight-active-color      "#81a2be"
-# 
+#
 # set completion-bg               "#282a2e"
 # set completion-fg               "#81a2be"
-# 
+#
 # set completion-highlight-fg     "#ffffff"
 # set completion-highlight-bg     "#81a2be"
-# 
+#
 # set recolor-lightcolor          "#1d1f21"
 # set recolor-darkcolor           "#e0e0e0"
-# 
+#
 # set recolor                     "true"
 # set recolor-keephue             "false"
 
@@ -112,38 +112,38 @@
 # Base16 OneDark
 # Author: Lalit Magant (http://github.com/tilal6991)
 
-# set default-bg                  "#19061f"
-# set default-fg                  "#c8ccd4"
-# 
-# set statusbar-fg                "#c8ccd4"
-# set statusbar-bg                "#1e222a"
-# 
-# set inputbar-bg                 "#19061f"
-# set inputbar-fg                 "#c8ccd4"
-# 
-# set notification-bg             "#19061f"
-# set notification-fg             "#c8ccd4"
-# 
-# set notification-error-bg       "#19061f"
-# set notification-error-fg       "#e06c75"
-# 
-# set notification-warning-bg     "#19061f"
-# set notification-warning-fg     "#e06c75"
-# 
-# set highlight-color             "#e5c07b"
-# set highlight-active-color      "#61afef"
-# 
-# set completion-bg               "#353b45"
-# set completion-fg               "#61afef"
-# 
-# set completion-highlight-fg     "#c8ccd4"
-# set completion-highlight-bg     "#61afef"
-# 
-# set recolor-lightcolor          "#19061f"
-# set recolor-darkcolor           "#abb2bf"
-# 
-# set recolor                     "true"
-# set recolor-keephue             "false"
+set default-bg                  "#19061f"
+set default-fg                  "#c8ccd4"
+
+set statusbar-fg                "#c8ccd4"
+set statusbar-bg                "#1e222a"
+
+set inputbar-bg                 "#19061f"
+set inputbar-fg                 "#c8ccd4"
+
+set notification-bg             "#19061f"
+set notification-fg             "#c8ccd4"
+
+set notification-error-bg       "#19061f"
+set notification-error-fg       "#e06c75"
+
+set notification-warning-bg     "#19061f"
+set notification-warning-fg     "#e06c75"
+
+set highlight-color             "#e5c07b"
+set highlight-active-color      "#61afef"
+
+set completion-bg               "#353b45"
+set completion-fg               "#61afef"
+
+set completion-highlight-fg     "#c8ccd4"
+set completion-highlight-bg     "#61afef"
+
+set recolor-lightcolor          "#1e222a"
+set recolor-darkcolor           "#abb2bf"
+
+set recolor                     "true"
+set recolor-keephue             "false"
 
 ################################################################################
 # Ayu-dark
@@ -187,75 +187,75 @@
 # Ayu-mirage
 # Author: Lalit Magant (http://github.com/tilal6991)
 
-set default-bg                  "#1F2430"
-set default-fg                  "#CBCCC6"
-
-set statusbar-fg                "#CBCCC6"
-set statusbar-bg                "#1e222a"
-
-set inputbar-bg                 "#1F2430"
-set inputbar-fg                 "#CBCCC6"
-
-set notification-bg             "#1F2430"
-set notification-fg             "#CBCCC6"
-
-set notification-error-bg       "#1F2430"
-set notification-error-fg       "#e06c75"
-
-set notification-warning-bg     "#1F2430"
-set notification-warning-fg     "#e06c75"
-
-set highlight-color             "#e5c07b"
-set highlight-active-color      "#61afef"
-
-set completion-bg               "#353b45"
-set completion-fg               "#61afef"
-
-set completion-highlight-fg     "#CBCCC6"
-set completion-highlight-bg     "#61afef"
-
-set recolor-lightcolor          "#1f2430"
-set recolor-darkcolor           "#CBCCC6"
-
-set recolor                     "true"
-set recolor-keephue             "false"
+# set default-bg                  "#1F2430"
+# set default-fg                  "#CBCCC6"
+#
+# set statusbar-fg                "#CBCCC6"
+# set statusbar-bg                "#1e222a"
+#
+# set inputbar-bg                 "#1F2430"
+# set inputbar-fg                 "#CBCCC6"
+#
+# set notification-bg             "#1F2430"
+# set notification-fg             "#CBCCC6"
+#
+# set notification-error-bg       "#1F2430"
+# set notification-error-fg       "#e06c75"
+#
+# set notification-warning-bg     "#1F2430"
+# set notification-warning-fg     "#e06c75"
+#
+# set highlight-color             "#e5c07b"
+# set highlight-active-color      "#61afef"
+#
+# set completion-bg               "#353b45"
+# set completion-fg               "#61afef"
+#
+# set completion-highlight-fg     "#CBCCC6"
+# set completion-highlight-bg     "#61afef"
+#
+# set recolor-lightcolor          "#1f2430"
+# set recolor-darkcolor           "#CBCCC6"
+#
+# set recolor                     "true"
+# set recolor-keephue             "false"
 ################################################################################
 
 # Tokyo Night
 # Author: Lalit Magant (http://github.com/tilal6991)
 
-set default-bg                  "#1F2430"
-set default-fg                  "#CBCCC6"
-
-set statusbar-fg                "#CBCCC6"
-set statusbar-bg                "#1e222a"
-
-set inputbar-bg                 "#1F2430"
-set inputbar-fg                 "#CBCCC6"
-
-set notification-bg             "#1F2430"
-set notification-fg             "#CBCCC6"
-
-set notification-error-bg       "#1F2430"
-set notification-error-fg       "#e06c75"
-
-set notification-warning-bg     "#1F2430"
-set notification-warning-fg     "#e06c75"
-
-set highlight-color             "#e5c07b"
-set highlight-active-color      "#61afef"
-
-set completion-bg               "#353b45"
-set completion-fg               "#61afef"
-
-set completion-highlight-fg     "#CBCCC6"
-set completion-highlight-bg     "#61afef"
-
-set recolor-lightcolor          "#1f2430"
-set recolor-darkcolor           "#CBCCC6"
-
-set recolor                     "true"
-set recolor-keephue             "false"
+# set default-bg                  "#1F2430"
+# set default-fg                  "#CBCCC6"
+#
+# set statusbar-fg                "#CBCCC6"
+# set statusbar-bg                "#1e222a"
+#
+# set inputbar-bg                 "#1F2430"
+# set inputbar-fg                 "#CBCCC6"
+#
+# set notification-bg             "#1F2430"
+# set notification-fg             "#CBCCC6"
+#
+# set notification-error-bg       "#1F2430"
+# set notification-error-fg       "#e06c75"
+#
+# set notification-warning-bg     "#1F2430"
+# set notification-warning-fg     "#e06c75"
+#
+# set highlight-color             "#e5c07b"
+# set highlight-active-color      "#61afef"
+#
+# set completion-bg               "#353b45"
+# set completion-fg               "#61afef"
+#
+# set completion-highlight-fg     "#CBCCC6"
+# set completion-highlight-bg     "#61afef"
+#
+# set recolor-lightcolor          "#1f2430"
+# set recolor-darkcolor           "#CBCCC6"
+#
+# set recolor                     "true"
+# set recolor-keephue             "false"
 
 ################################################################################
 
