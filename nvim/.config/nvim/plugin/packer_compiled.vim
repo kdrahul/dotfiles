@@ -77,6 +77,11 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -121,6 +126,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
+  },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["gruvbuddy.nvim"] = {
     loaded = true,
@@ -174,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
+  ["nvim-base16"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim-base16",
+    url = "https://github.com/RRethy/nvim-base16"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -208,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim_colors",
     url = "https://github.com/kdrahul/nvim_colors"
+  },
+  onebuddy = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/onebuddy",
+    url = "https://github.com/Th3Whit3Wolf/onebuddy"
   },
   ["packer.nvim"] = {
     loaded = true,

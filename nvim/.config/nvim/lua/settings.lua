@@ -9,12 +9,6 @@ cmd "filetype plugin on"
 cmd('let &titleold="' .. TERMINAL .. '"')
 cmd "set inccommand=split"
 cmd "set iskeyword+=-"
--- if O.transparent_window then
---   cmd "au ColorScheme * hi Normal ctermbg=none guibg=none"
--- end
---- COLORSCHEME ---
-
--- cmd "colorscheme ayu-mirage"
 
 ---  SETTINGS  ---
 

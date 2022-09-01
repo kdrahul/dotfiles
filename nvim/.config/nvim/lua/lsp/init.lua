@@ -118,7 +118,7 @@ local fmts = {
       -- C FMT
       function()
         return {
-          exe = "clang-format",
+          exe = "clang-format-14",
           args = {},
           stdin = true
         }
@@ -128,7 +128,7 @@ local fmts = {
       -- C++ FMT
       function()
         return {
-          exe = "clang-format",
+          exe = "clang-format-14",
           args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
           stdin = true,
           cwd = vim.fn.expand("%:p:h")
@@ -139,7 +139,7 @@ local fmts = {
       -- C++ FMT
       function()
         return {
-          exe = "clang-format",
+          exe = "clang-format-14",
           args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
           stdin = true
         }

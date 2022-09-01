@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts/:/usr/pgadmin4/bin:/usr/local/share/webOS_TV_SDK/CLI/bin/:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts/:/usr/pgadmin4/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -85,6 +85,10 @@ source $ZSH/oh-my-zsh.sh
 #(cat ~/.cache/wal/sequences &)
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# History size
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
+
 # Auto tab completion
 autoload -Uz compinit && compinit
 
@@ -129,24 +133,19 @@ export COINBASE_API="659a14d1-7720-4e6a-ab23-5aff85245846"
 alias e="nvim"
 # alias dust="dust -r"
 # alias wallpaper="wal --backend colorz -i ~/Pictures/Wallpapers --iterative"
-alias ins="sudo apt install"
 alias yta="youtube-dl -x --audio-format mp3 --prefer-ffmpeg"
 # alias hdd="sudo mount /dev/sda1 ~/HDD/"
 alias fzf="fzf --preview='cat {}'"
 # alias ef="nvim $(fzf)"
 alias ls="exa"
-alias cfa="nvim ~/.config/alacritty/alacritty.yml"
 alias cfz="nvim ~/.zshrc"
 alias cfp="nvim ~/.config/polybar/config.ini"
 alias mocp="mocp -T green_theme"
-# alias cfv="nvim ~/.config/nvim/lua/plugins.lua"
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -vp"
 alias tmux="tmux -u"
-# alias cfb="nvim ~/.config/bspwm/bspwmrc"
-# alias cfs="nvim ~/.config/sxhkd/sxhkdrc"
 alias asdf="setxkbmap us -variant dvorak && echo 'Changed to Dvorak Layout'"
 alias aoeu="setxkbmap us && echo 'Changed to QWERTY Layout'"
 
@@ -155,3 +154,18 @@ alias aoeu="setxkbmap us && echo 'Changed to QWERTY Layout'"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias python='python3'
+
+# bun completions
+[ -s "/home/rdk/.bun/_bun" ] && source "/home/rdk/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/home/rdk/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

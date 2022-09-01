@@ -92,7 +92,12 @@ return require("packer").startup(
     use "rafamadriz/neon"
     use 'folke/tokyonight.nvim'
     use { 'rktjmp/lush.nvim' }
-
+    use({
+      "catppuccin/nvim",
+      as = "catppuccin"
+    })
+    use { "ellisonleao/gruvbox.nvim" }
+    use 'RRethy/nvim-base16'
     -- Commenter
     use "terrortylor/nvim-comment"
   end

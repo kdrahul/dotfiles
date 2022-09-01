@@ -10,16 +10,19 @@ map("n", "<leader>c", "<Cmd>cclose<CR>", {noremap = true, silent = true})
 map("n", "<leader>f", "<cmd>Files<cr>", {noremap = true, silent = true})
 map("n", "<leader>b", "<cmd>Buffers<cr>", {noremap = true, silent = true})
 map("n", "<leader>r", "<cmd>Rg<cr>", {noremap = true, silent = true})
-map("n", "<C-_>", "<cmd>BLines<cr>", {noremap = true, silent = true})
+map("n", "<C-/>", "<cmd>BLines<cr>", {noremap = true, silent = true})
 
 -- Other
 map("n", "H", "^", {silent = true})
 map("n", "L", "$", {silent = true})
-map("n", "<c-j>", "<Esc>", {noremap = true, silent = true})
-map("i", "<c-j>", "<Esc>", {noremap = true, silent = true})
-map("v", "<c-j>", "<Esc>", {noremap = true, silent = true})
 map("n", "<leader>g", "<C-^>", {noremap = true, silent = true})
 map("n", "<leader>h", "<cmd>nohls<CR>", {noremap = true, silent = true})
+map("n", "<C-h>", "<C-w>h", {noremap = true, silent = true})
+map("n", "<C-j>", "<C-w>j", {noremap = true, silent = true})
+map("n", "<C-k>", "<C-w>k", {noremap = true, silent = true})
+map("n", "<C-l>", "<C-w>l", {noremap = true, silent = true})
+map("n", "<C-s>", "<cmd>w<CR>", {noremap = true, silent = true}) -- Saving a file
+map("n", "<C-q>", "<cmd>q<CR>", {noremap = true, silent = true}) -- Closing a file
 
 -- LSP bindings
 map("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true, silent = true})
