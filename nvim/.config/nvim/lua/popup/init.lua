@@ -30,7 +30,7 @@ cmp.setup(
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
       ["<C-Space>"] = cmp.mapping.complete(),
       ["<C-e>"] = cmp.mapping.close(),
-      ["<C-y>"] = cmp.mapping.confirm(
+      ["<CR>"] = cmp.mapping.confirm(
         {
           behavior = cmp.ConfirmBehavior.Replace,
           select = true
@@ -45,17 +45,3 @@ cmp.setup(
     }
   }
 )
-
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- require("lspconfig")["tsserver"].setup {
---   capabilities = capabilities
--- }
--- require("lspconfig")["rust_analyzer"].setup {
---   capabilities = capabilities
--- }
--- require("lspconfig")["ccls"].setup {
---   capabilities = capabilities
--- }
--- require("lspconfig")["pyright"].setup {
---   capabilities = capabilities
--- }

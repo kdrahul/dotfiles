@@ -46,4 +46,4 @@
 --     }
 --   })
 
-vim.cmd [[ colorscheme base16-tomorrow-night ]]
+vim.cmd [[ colorscheme oh-lucy-evening]]

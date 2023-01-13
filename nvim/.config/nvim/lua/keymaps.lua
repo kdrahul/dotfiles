@@ -1,4 +1,6 @@
 local map = vim.api.nvim_set_keymap
+local cmp = require("cmp")
+local luasnip = require("luasnip")
 
 vim.g.mapleader = " "
 -- Quickfix movement
@@ -21,8 +23,8 @@ map("n", "<C-h>", "<C-w>h", {noremap = true, silent = true})
 map("n", "<C-j>", "<C-w>j", {noremap = true, silent = true})
 map("n", "<C-k>", "<C-w>k", {noremap = true, silent = true})
 map("n", "<C-l>", "<C-w>l", {noremap = true, silent = true})
-map("n", "<C-s>", "<cmd>w<CR>", {noremap = true, silent = true}) -- Saving a file
-map("n", "<C-q>", "<cmd>q<CR>", {noremap = true, silent = true}) -- Closing a file
+-- map("n", "<C-s>", "<cmd>w<CR>", {noremap = true, silent = true}) -- Saving a file
+-- map("n", "<C-q>", "<cmd>q<CR>", {noremap = true, silent = true}) -- Closing a file
 
 -- LSP bindings
 map("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true, silent = true})
@@ -38,3 +40,4 @@ map("n", "Q", "gq", {noremap = true, silent = true})
 
 -- Formatter
 map("n", "<leader>s", "<Cmd>Format<CR>", {noremap = true, silent = true})
+

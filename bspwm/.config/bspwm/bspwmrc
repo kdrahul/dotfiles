@@ -5,7 +5,7 @@ pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc -m 1 &
 xset r rate 225 150
 setxkbmap -option ctrl:nocaps
 
-feh --bg-scale $HOME/Pictures/Wallpapers/dark_skies.jpg
+feh --bg-scale $HOME/Pictures/Wallpapers/lucian_vs_thresh_league_of_legends_fan_art_by_ashot94_ddpja28-fullview.jpg
 picom -b
 
 bash ~/.config/polybar/launch.sh

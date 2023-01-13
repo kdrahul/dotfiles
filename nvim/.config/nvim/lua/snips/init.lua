@@ -1,48 +1,85 @@
-local ls = require "luasnip"
-local s = ls.snippet
-local sn = ls.snippet_node
-local t = ls.text_node
-local i = ls.insert_node
-local f = ls.function_node
-local c = ls.choice_node
-local d = ls.dynamic_node
+local cmp = require("cmp")
+local luasnip = require("luasnip")
 
-local function copy(args)
-  return args[1]
-end
-
-ls.config.set_config {
-  history = true,
-  updateevents = "TextChanged, TextChangedI",
-  enable_autosnippets = true,
-}
-
--- Contains snippets
-ls.snippets = {
-  -- Applicable to all file types
-  all = {},
-  -- Applicable to only Rust files
-  rust = {},
-  -- Applicable to only Python files
-  python = {},
-  -- Applicable to only Javascript files
-  javascript = {
-    s(
-      "comp",
-      {
-        t("// Component"),
-        -- Function name placeholder
-        -- f(copy, "name"),
-        t({"", "const "}),
-        i(2, "name"),
-        t(" = ("),
-        -- Function parameter placeholder
-        i(1, "params"),
-        t({") => {", "\t"}),
-        i(0),
-        t({"", "}"})
-      }
-    )
-  }
-}
-
+cmp.setup({
+	snippet = {
+		expand = function(args)
+			luasnip.lsp_expand(args.body) -- For `luasnip` users.
+		end,
+	},
+	mapping = {
+		["<C-p>"] = cmp.mapping.select_prev_item(),
+		["<C-n>"] = cmp.mapping.select_next_item(),
+		["<A-o>"] = cmp.mapping.select_prev_item(),
+		["<A-i>"] = cmp.mapping.select_next_item(),
+		["<A-u>"] = cmp.mapping.confirm({ select = true }),
+		-- 	["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+		-- 	["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+		-- 	["<C-i>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		--	["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+		["<C-e>"] = cmp.mapping({
+			i = cmp.mapping.abort(),
+			c = cmp.mapping.close(),
+		}),
+		-- 	-- Accept currently selected item. If none selected, `select` first item.
+		-- 	-- Set `select` to `false` to only confirm explicitly selected items.
+		["<CR>"] = cmp.mapping.confirm({ select = false }),
+		-- ["<Space><Space>"] = cmp.mapping.confirm({ select = false }),
+		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		-- 	-- ["<Tab>"] = cmp.mapping(function(fallback)
+		-- 	-- 	if cmp.visible() then
+		-- 	-- 		cmp.select_next_item()
+		-- 	-- 	else
+		-- 	-- 		fallback()
+		-- 	-- 	end
+		-- 	-- end, {
+		-- 	-- 	"i",
+		-- 	-- 	"s",
+		-- 	-- }),
+		-- 	-- ["<S-Tab>"] = cmp.mapping(function(fallback)
+		-- 	-- 	if cmp.visible() then
+		-- 	-- 		cmp.select_prev_item()
+		-- 	-- 	elseif luasnip.jumpable(-1) then
+		-- 	-- 		luasnip.jump(-1)
+		-- 	-- 	else
+		-- 	-- 		fallback()
+		-- 	-- 	end
+		-- 	-- end, {
+		-- 	-- 	"i",
+		-- 	-- 	"s",
+		-- 	-- }),
+	},
+	formatting = {
+		fields = { "kind", "abbr", "menu" },
+		format = function(entry, vim_item)
+			-- Kind icons
+			vim_item.menu = ({
+				copilot = "[Copilot]",
+				luasnip = "LuaSnip",
+				nvim_lua = "[NVim Lua]",
+				nvim_lsp = "[LSP]",
+				buffer = "[Buffer]",
+				path = "[Path]",
+			})[entry.source.name]
+			return vim_item
+		end,
+	},
+	sources = {
+		{ name = "luasnip" },
+		{ name = "nvim_lsp", max_item_count = 6 },
+		{ name = "nvim_lua" },
+		{ name = "path" },
+		{ name = "buffer", max_item_count = 6 },
+	},
+	confirm_opts = {
+		behavior = cmp.ConfirmBehavior.Replace,
+		select = false,
+	},
+	-- documentation = {
+	-- 	border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+	-- },
+	-- experimental = {
+	-- 	ghost_text = true,
+	-- 	native_menu = false,
+	-- },
+})

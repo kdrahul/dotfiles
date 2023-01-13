@@ -12,23 +12,26 @@ packadd packer.nvim
 try
 
 lua << END
-  local time
-  local profile_info
-  local should_profile = false
-  if should_profile then
-    local hrtime = vim.loop.hrtime
-    profile_info = {}
-    time = function(chunk, start)
-      if start then
-        profile_info[chunk] = hrtime()
-      else
-        profile_info[chunk] = (hrtime() - profile_info[chunk]) / 1e6
-      end
+_G._packer = _G._packer or {}
+_G._packer.inside_compile = true
+
+local time
+local profile_info
+local should_profile = false
+if should_profile then
+  local hrtime = vim.loop.hrtime
+  profile_info = {}
+  time = function(chunk, start)
+    if start then
+      profile_info[chunk] = hrtime()
+    else
+      profile_info[chunk] = (hrtime() - profile_info[chunk]) / 1e6
     end
-  else
-    time = function(chunk, start) end
   end
-  
+else
+  time = function(chunk, start) end
+end
+
 local function save_profiles(threshold)
   local sorted_times = {}
   for chunk_name, time_taken in pairs(profile_info) do
@@ -41,8 +44,10 @@ local function save_profiles(threshold)
       results[i] = elem[1] .. ' took ' .. elem[2] .. 'ms'
     end
   end
+  if threshold then
+    table.insert(results, '(Only showing plugins that took longer than ' .. threshold .. ' ms ' .. 'to load)')
+  end
 
-  _G._packer = _G._packer or {}
   _G._packer.profile_output = results
 end
 
@@ -127,6 +132,11 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
   },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
@@ -136,6 +146,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim",
     url = "https://github.com/tjdevries/gruvbuddy.nvim"
+  },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -199,6 +214,13 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
   },
+  ["nvim-jdtls"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/opt/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -215,14 +237,20 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   nvim_colors = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/nvim_colors",
     url = "https://github.com/kdrahul/nvim_colors"
+  },
+  ["oh-lucy.nvim"] = {
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/oh-lucy.nvim",
+    url = "https://github.com/Yazeed1s/oh-lucy.nvim"
   },
   onebuddy = {
     loaded = true,
@@ -254,6 +282,12 @@ _G.packer_plugins = {
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/snazzybuddy.nvim",
     url = "https://github.com/bbenzikry/snazzybuddy.nvim"
   },
+  ["todo-comments.nvim"] = {
+    config = { "\27LJ\2\n�\3\0\0\6\0\26\0!6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\24\0005\3\6\0005\4\3\0005\5\4\0=\5\5\4=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0005\5\r\0=\5\5\4=\4\14\0035\4\15\0005\5\16\0=\5\5\4=\4\17\0035\4\18\0005\5\19\0=\5\5\4=\4\20\0035\4\21\0005\5\22\0=\5\5\4=\4\23\3=\3\25\2B\0\2\1K\0\1\0\rkeywords\1\0\0\tTEST\1\4\0\0\fTESTING\vPASSED\vFAILED\1\0\2\ticon\t⏲ \ncolor\ttest\tNOTE\1\2\0\0\tINFO\1\0\2\ticon\5\ncolor\thint\tPERF\1\4\0\0\nOPTIM\16PERFORMANCE\rOPTIMIZE\1\0\1\ticon\5\tWARN\1\3\0\0\fWARNING\bXXX\1\0\2\ticon\t \ncolor\fwarning\tHACK\1\0\2\ticon\t \ncolor\fwarning\tTODO\1\0\2\ticon\t \ncolor\tinfo\bFIX\1\0\0\balt\1\5\0\0\nFIXME\bBUG\nFIXIT\nISSUE\1\0\2\ticon\5\ncolor\nerror\nsetup\18todo-comments\frequire\0" },
+    loaded = true,
+    path = "/home/rdk/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/rdk/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
@@ -266,13 +300,25 @@ time([[Defining packer_plugins]], false)
 time([[Setup for markdown-preview.nvim]], true)
 try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rmarkdown\19mkdp_filetypes\6g\bvim\0", "setup", "markdown-preview.nvim")
 time([[Setup for markdown-preview.nvim]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n�\3\0\0\6\0\26\0!6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\24\0005\3\6\0005\4\3\0005\5\4\0=\5\5\4=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0005\5\r\0=\5\5\4=\4\14\0035\4\15\0005\5\16\0=\5\5\4=\4\17\0035\4\18\0005\5\19\0=\5\5\4=\4\20\0035\4\21\0005\5\22\0=\5\5\4=\4\23\3=\3\25\2B\0\2\1K\0\1\0\rkeywords\1\0\0\tTEST\1\4\0\0\fTESTING\vPASSED\vFAILED\1\0\2\ticon\t⏲ \ncolor\ttest\tNOTE\1\2\0\0\tINFO\1\0\2\ticon\5\ncolor\thint\tPERF\1\4\0\0\nOPTIM\16PERFORMANCE\rOPTIMIZE\1\0\1\ticon\5\tWARN\1\3\0\0\fWARNING\bXXX\1\0\2\ticon\t \ncolor\fwarning\tHACK\1\0\2\ticon\t \ncolor\fwarning\tTODO\1\0\2\ticon\t \ncolor\tinfo\bFIX\1\0\0\balt\1\5\0\0\nFIXME\bBUG\nFIXIT\nISSUE\1\0\2\ticon\5\ncolor\nerror\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType java ++once lua require("packer.load")({'nvim-jdtls'}, { ft = "java" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
+
+_G._packer.inside_compile = false
+if _G._packer.needs_bufread == true then
+  vim.cmd("doautocmd BufRead")
+end
+_G._packer.needs_bufread = false
+
 if should_profile then save_profiles() end
 
 END

@@ -21,27 +21,16 @@ M.config = function()
     max_menu_width = 100,
     documentation = true,
     source = {
-      path = {kind = "   (Path)"},
-      buffer = {kind = "   (Buffer)"},
-      calc = {kind = "   (Calc)"},
-      -- vsnip = { kind = "   (Snippet)" },
-      nvim_lsp = {kind = "   (LSP)"},
-      nvim_lua = {kind = "  "},
+      path = {kind = "   (Path)"},
+      buffer = {kind = "   (Buffer)"},
+      calc = {kind = "   (Calc)"},
+      nvim_lsp = {kind = "   (LSP)"},
+      nvim_lua = {kind = "  "},
       nvim_lua = true,
-      -- spell = { kind = "   (Spell)" },
       tags = false,
-      -- vim_dadbod_completion = true,
-      -- snippets_nvim = {kind = "  "},
-      -- ultisnips = {kind = "  "},
-      treesitter = {kind = "  "}
-      -- emoji = { kind = " ﲃ  (Emoji)", filetypes = { "markdown", "text" } },
-      -- for emoji press : (idk if that in compe tho)
+      treesitter = {kind = " "}
     }
   }
-
-  -- if O.plugin.tabnine.active then
-  -- opt.source.tabnine = { kind = " ", priority = 200, max_reslts = 6 }
-  -- end
 
   require("compe").setup(opt)
 
