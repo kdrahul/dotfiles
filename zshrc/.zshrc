@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts:/usr/pgadmin4/bin:$HOME/go/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts:/usr/pgadmin4/bin:$HOME/go/bin:$HOME/.emacs.d/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -138,8 +138,6 @@ alias yta="youtube-dl -x --audio-format mp3 --prefer-ffmpeg"
 alias fzf="fzf --preview='cat {}'"
 # alias ef="nvim $(fzf)"
 alias ls="exa"
-alias cfz="nvim ~/.zshrc"
-alias cfp="nvim ~/.config/polybar/config.ini"
 alias mocp="mocp -T green_theme"
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
 alias mv="mv -iv"
@@ -148,6 +146,7 @@ alias mkdir="mkdir -vp"
 alias tmux="tmux -u"
 alias asdf="setxkbmap us -variant dvorak && echo 'Changed to Dvorak Layout'"
 alias aoeu="setxkbmap us && echo 'Changed to QWERTY Layout'"
+alias em="emacsclient -c -a 'emacs'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

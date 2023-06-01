@@ -47,6 +47,8 @@ require('packer').startup(function(use)
 
   -- use 'navarasu/onedark.nvim' -- Theme inspired by Atom
   use 'Yazeed1s/oh-lucy.nvim'
+  use 'RRethy/nvim-base16'
+  use 'nyoom-engineering/nyoom.nvim'
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
@@ -56,6 +58,8 @@ require('packer').startup(function(use)
 --     "iamcco/markdown-preview.nvim",
 --     run = function() vim.fn["mkdp#util#install"]() end,
 -- })
+
+-- Game
 
 use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   -- Fuzzy Finder (files, lsp, etc)
@@ -125,7 +129,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme oh-lucy-evening]]
+vim.cmd [[colorscheme base16-tomorrow-night]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -161,7 +165,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'onedark',
+    -- theme = 'onedark',
     component_separators = '|',
     section_separators = '',
   },
@@ -313,7 +317,7 @@ local on_attach = function(_, bufnr)
 
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-  nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+  nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
   nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
   nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
@@ -345,7 +349,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua', 'gopls', 'jdtls' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'lua_ls', 'gopls', 'jdtls' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -363,6 +367,14 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+require('lspconfig').rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {
+    "rustup", "run", "nightly", "rust-analyzer",
+  }
+}
+
 -- Turn on lsp status information
 require('fidget').setup()
 
@@ -373,26 +385,26 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('lspconfig').sumneko_lua.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT)
-        version = 'LuaJIT',
-        -- Setup your lua path
-        path = runtime_path,
-      },
-      diagnostics = {
-        globals = { 'vim' },
-      },
-      workspace = { library = vim.api.nvim_get_runtime_file('', true) },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = { enable = false },
-    },
-  },
-}
+-- require('lspconfig').sumneko_lua.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   settings = {
+--     Lua = {
+--       runtime = {
+--         -- Tell the language server which version of Lua you're using (most likely LuaJIT)
+--         version = 'LuaJIT',
+--         -- Setup your lua path
+--         path = runtime_path,
+--       },
+--       diagnostics = {
+--         globals = { 'vim' },
+--       },
+--       workspace = { library = vim.api.nvim_get_runtime_file('', true) },
+--       -- Do not send telemetry data containing a randomized but unique identifier
+--       telemetry = { enable = false },
+--     },
+--   },
+-- }
 
 -- nvim-cmp setup
 local cmp = require 'cmp'

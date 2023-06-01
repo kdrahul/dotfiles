@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc -m 1 &
 
-xset r rate 225 150
+xset r rate 225 50
 setxkbmap -option ctrl:nocaps
 
 feh --bg-scale $HOME/Pictures/Wallpapers/lucian_vs_thresh_league_of_legends_fan_art_by_ashot94_ddpja28-fullview.jpg

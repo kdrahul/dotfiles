@@ -121,9 +121,15 @@ return require("packer").startup(
     use { "ellisonleao/gruvbox.nvim" }
     use 'RRethy/nvim-base16'
     use 'Yazeed1s/oh-lucy.nvim'
+    use 'NvChad/nvim-colorizer.lua'
 
     -- Commenter
-    use "terrortylor/nvim-comment"
+    use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
     use  { "mfussenegger/nvim-jdtls", ft = { "java" }}
   end
 )

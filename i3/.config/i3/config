@@ -25,11 +25,12 @@ font pango:Ubuntu Mono 11
 #
 # Set Ctrl keymap and speed
 exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id xset r rate 225 100
+exec --no-startup-id xset r rate 300 50
 exec --no-startup-id compton -b
 exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/grey_mountain.jpg
 exec --no-startup-id natural_scrolling
 exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
+exec --no-startup-id /usr/bin/emacs --daemon
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
