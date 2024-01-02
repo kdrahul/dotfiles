@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/rdk/dev/todo-logic'
+let g:netrw_dirhist_9='/home/rdk/qmk_firmware/lib/chibios-contrib/ext/nxp-middleware-usb/output/source'
+let g:netrw_dirhist_8='/home/rdk/.config'
 let g:netrw_dirhist_7='/home/rdk/dev/java_stuff/survey/src/main/java/com/sample/survey'
 let g:netrw_dirhist_6='/home/rdk/dev/java_stuff/survey/src/main/java/com/sample'
 let g:netrw_dirhist_5='/home/rdk/dev/java_stuff/survey/src/main/java/com'

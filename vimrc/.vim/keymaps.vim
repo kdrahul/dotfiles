@@ -1,10 +1,10 @@
 " FZF maps
-nnoremap <leader>f :Files<cr>
-nnoremap <leader>r :Rg<cr>
+nnoremap <leader>sf :Files<cr>
+nnoremap <leader>sr :Rg<cr>
 
 " Cargo
-nnoremap <leader>t :Cargo test<cr>
-nnoremap <leader>c :Cargo check<cr>
+nnoremap <leader>ct :Cargo test<cr>
+nnoremap <leader>cc :Cargo check<cr>
 
 map <Left> <NOP>
 map <Right> <NOP>

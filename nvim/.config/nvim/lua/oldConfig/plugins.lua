@@ -33,6 +33,14 @@ return require("packer").startup(
     use {"nvim-lua/plenary.nvim"}
     -- use {"tjdevries/astronauta.nvim"}
     use {"neovim/nvim-lspconfig",'williamboman/nvim-lsp-installer'}
+    use {
+    'junnplus/lsp-setup.nvim',
+        requires = {
+            'neovim/nvim-lspconfig',
+            'williamboman/mason.nvim', -- optional
+            'williamboman/mason-lspconfig.nvim', -- optional
+        }
+    }
     use {"glepnir/lspsaga.nvim"}
 
     -- Popup Stuff

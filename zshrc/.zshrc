@@ -8,6 +8,12 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts:/usr/pgadmin4/bin:$HOME/go/bin:$HOME/.emacs.d/bin:$PATH
 
+export PNPM_HOME="/home/rdk/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -119,6 +125,7 @@ export WINIT_HIDPI_FACTOR=1
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
 export ROCKET_CLI_COLORS=false
 export COINBASE_API="659a14d1-7720-4e6a-ab23-5aff85245846"
+export RUST_LOG="debug"
 
 # Environment variables
 # Compilation flags
@@ -170,3 +177,11 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export GOPHERJS_GOROOT="$(go1.17 env GOROOT)"  # Also add this line to your .profile or equivalent.
+
+# pnpm
+export PNPM_HOME="/home/rdk/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

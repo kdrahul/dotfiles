@@ -152,36 +152,30 @@ require("formatter").setup(fmts)
 
 require("go").setup()
 
-local lsp_installer = require("nvim-lsp-installer")
+local lsp_installer = require("nvim-lsp-installer").setup{}
 
--- Register a handler that will be called for all installed servers.
--- Alternatively, you may also register handlers on specific server instances instead (see example below).
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
-
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    -- end
-
-    -- This setup() function is exactly the same as lspconfig's setup function.
-    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-    server:setup(opts)
-end)
 
 lspconfig = require "lspconfig"
-  util = require "lspconfig/util"
+util = require "lspconfig/util"
 
-  lspconfig.gopls.setup {
-    cmd = {"gopls", "serve"},
-    filetypes = {"go", "gomod"},
-    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-    settings = {
-      gopls = {
-        analyses = {
-          unusedparams = true,
-        },
-        staticcheck = true,
+lspconfig.gopls.setup {
+  cmd = {"gopls", "serve"},
+  filetypes = {"go", "gomod"},
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
       },
+      staticcheck = true,
     },
-  }
+  },
+}
+
+lspconfig.tsserver.setup{}
+lspconfig.jdtls.setup{}
+lspconfig.rust_analyzer.setup{
+  settings = {
+    ['rust-analyzer'] = {},
+  },
+}
