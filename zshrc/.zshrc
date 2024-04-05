@@ -154,6 +154,7 @@ alias tmux="tmux -u"
 alias asdf="setxkbmap us -variant dvorak && echo 'Changed to Dvorak Layout'"
 alias aoeu="setxkbmap us && echo 'Changed to QWERTY Layout'"
 alias em="emacsclient -c -a 'emacs'"
+alias fd="fdfind"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -185,3 +186,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+source /home/rdk/.config/broot/launcher/bash/br
