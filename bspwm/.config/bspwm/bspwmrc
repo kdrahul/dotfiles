@@ -2,17 +2,27 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc -m 1 &
 
+# my_laptop_external_monitor=$(xrandr --query | grep 'DisplayPort-1')
+# if [[ $my_laptop_external_monitor = *connected* ]]; then
+#     xrandr --output DisplayPort-1 --mode 2560x1440 --rate 165 --primary
+# fi
+
+xrandr --rate 165
+
 xset r rate 225 50
 setxkbmap -option ctrl:nocaps
 
-feh --bg-scale $HOME/Pictures/Wallpapers/lucian_vs_thresh_league_of_legends_fan_art_by_ashot94_ddpja28-fullview.jpg
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
+feh --bg-scale $HOME/Pictures/Wallpapers/where-cold-wind-blows-4k-fv.jpg
 picom -b
 
 bash ~/.config/polybar/launch.sh
 /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
 /usr/bin/nm-applet &
 
-bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9
+
+bspc monitor DisplayPort-1 -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width                  1
 bspc config focused_border_color          "#a3685a"
