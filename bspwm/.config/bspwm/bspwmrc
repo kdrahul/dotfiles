@@ -14,11 +14,11 @@ setxkbmap -option ctrl:nocaps
 
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
-feh --bg-scale $HOME/Pictures/Wallpapers/where-cold-wind-blows-4k-fv.jpg
+feh --bg-scale $HOME/Pictures/backiee-267361-landscape.jpg
 picom -b
 
 bash ~/.config/polybar/launch.sh
-/usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
+#/usr/lib/x86_64-linux-gnu/libexec/kdeconnectd &
 /usr/bin/nm-applet &
 
 

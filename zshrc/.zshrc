@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts:/usr/pgadmin4/bin:$HOME/go/bin:$HOME/.emacs.d/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts:/usr/pgadmin4/bin:/usr/local/go/bin:$HOME/.emacs.d/bin:$PATH
 
 export PNPM_HOME="/home/rdk/.local/share/pnpm"
 case ":$PATH:" in
@@ -177,7 +177,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-export GOPHERJS_GOROOT="$(go1.17 env GOROOT)"  # Also add this line to your .profile or equivalent.
+#export GOPHERJS_GOROOT="$(go1.17 env GOROOT)"  # Also add this line to your .profile or equivalent.
 
 # pnpm
 export PNPM_HOME="/home/rdk/.local/share/pnpm"
@@ -186,5 +186,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-source /home/rdk/.config/broot/launcher/bash/br
