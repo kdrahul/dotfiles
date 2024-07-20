@@ -9,14 +9,14 @@
 #  - /path/to/alacritty.yml
 
 import:
-    # - /home/rdk/.config/alacritty/base16-atelier-dune-256.yml
-    # - /home/rdk/.config/alacritty/base16-tomorrow-night.yml
-    - /home/rdk/configs/alacritty-ayu-dark.yml
-    #- /home/rdk/.config/alacritty/base16-nord-256.yml
-    #- /home/rdk/.config/alacritty/base16-gruvbox-dark-hard-256.yml
-    #- /home/rdk/.config/alacritty/base16-gruvbox-dark-medium-256.yml
-    #- /home/rdk/.config/alacritty/base16-gruvbox-dark-pale-256.yml
-    # - /home/rdk/.config/alacritty/base16-onedark-256.yml
+    # - /home/kd/.config/alacritty/base16-atelier-dune-256.yml
+    - /home/kd/.config/alacritty/base16-tomorrow-night.yml
+    # - /home/kd/.config/alacritty/alacritty-ayu-dark.yml
+    # - /home/kd/.config/alacritty/base16-nord-256.yml
+    # - /home/kd/.config/alacritty/base16-gruvbox-dark-hard-256.yml
+    # - /home/kd/.config/alacritty/base16-gruvbox-dark-medium-256.yml
+    # - /home/kd/.config/alacritty/base16-gruvbox-dark-pale-256.yml
+    # - /home/kd/.config/alacritty/base16-onedark-256.yml
     
 
 
@@ -122,54 +122,54 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     #family: Source Code Pro
-    #family: JetBrainsMono
+    # family: JetBrainsMono Light
     family: MesloLGS NF
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
   # Bold font face
-  #bold:
+  # bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: DejaVu Sans Mono Bold
+    # family: JetBrainsMono
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    # style: Bold
 
   # Italic font face
-  #italic:
+  # italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: DejaVu Sans Mono Oblique
+    # family: JetBrainsMono
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    # style: Italic
 
   # Bold italic font face
-  #bold_italic:
+  # bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    # family: JetBrainsMono
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold Italic
+    # style: Bold Italic
 
   # Point size
-  size: 20
+  size: 12
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  #offset:
-  #x: -2
-  #y: -2
+  offset:
+    x: -1
+    y: -4
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
