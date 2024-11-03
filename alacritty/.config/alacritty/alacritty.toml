@@ -1,0 +1,28 @@
+import = ["$HOME/.config/alacritty/base16-tomorrow-night.yml"]
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 18
+
+[font.normal]
+family = "Menlo"
+
+[font.offset]
+x = -1
+y = -4
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window]
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"

@@ -114,8 +114,8 @@ else
   export EDITOR='nvim'
 fi
 
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+source /usr/local/fzf/completion.zsh
+source /usr/local/fzf/key-bindings.zsh
 export FZF_DEFAULT_COMPLETION='rg --files --hidden --follow --no-ignore-vcs '
 export FZF_DEFAULT_OPTS='--height 40%'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -144,7 +144,7 @@ alias yta="youtube-dl -x --audio-format mp3 --prefer-ffmpeg"
 # alias hdd="sudo mount /dev/sda1 ~/HDD/"
 alias fzf="fzf --preview='cat {}'"
 # alias ef="nvim $(fzf)"
-alias ls="exa"
+# alias ls="exa"
 alias mocp="mocp -T green_theme"
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
 alias mv="mv -iv"
@@ -186,3 +186,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$PATH:/Users/rahulkulkarni/.modular/bin"
