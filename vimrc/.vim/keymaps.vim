@@ -1,6 +1,6 @@
 " FZF maps
 nnoremap <leader>sf :Files<cr>
-nnoremap <leader>sr :Rg<cr>
+nnoremap <leader>sg :Rg<cr>
 
 " Cargo
 nnoremap <leader>ct :Cargo test<cr>

@@ -8,15 +8,16 @@
 #import:
 #  - /path/to/alacritty.yml
 
-import:
-    # - $HOME/.config/alacritty/base16-atelier-dune-256.yml
-    - $HOME/.config/alacritty/base16-tomorrow-night.yml
-    # - $HOME/.config/alacritty/alacritty-ayu-dark.yml
-    # - $HOME/.config/alacritty/base16-nord-256.yml
-    # - $HOME/.config/alacritty/base16-gruvbox-dark-hard-256.yml
-    # - $HOME/.config/alacritty/base16-gruvbox-dark-medium-256.yml
-    # - $HOME/.config/alacritty/base16-gruvbox-dark-pale-256.yml
-    # - $HOME/.config/alacritty/base16-onedark-256.yml
+general:
+  import:
+      # - $HOME/.config/alacritty/base16-atelier-dune-256.yml
+      - $HOME/.config/alacritty/base16-tomorrow-night.yml
+      # - $HOME/.config/alacritty/alacritty-ayu-dark.yml
+      # - $HOME/.config/alacritty/base16-nord-256.yml
+      # - $HOME/.config/alacritty/base16-gruvbox-dark-hard-256.yml
+      # - $HOME/.config/alacritty/base16-gruvbox-dark-medium-256.yml
+      # - $HOME/.config/alacritty/base16-gruvbox-dark-pale-256.yml
+      # - $HOME/.config/alacritty/base16-onedark-256.yml
     
 
 
@@ -163,7 +164,7 @@ font:
     # style: Bold Italic
 
   # Point size
-  size: 12
+  size: 18
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -392,7 +393,7 @@ draw_bold_text_with_bright_colors: false
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /bin/bash
+  program: /bin/zsh
   args:
     - --login
 
@@ -400,7 +401,7 @@ shell:
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
-working_directory: $HOME
+# working_directory: $HOME
 
 # WinPTY backend (Windows only)
 #

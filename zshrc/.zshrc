@@ -116,8 +116,10 @@ fi
 
 source /usr/local/fzf/completion.zsh
 source /usr/local/fzf/key-bindings.zsh
-export FZF_DEFAULT_COMPLETION='rg --files --hidden --follow --no-ignore-vcs '
-export FZF_DEFAULT_OPTS='--height 40%'
+# export FZF_DEFAULT_COMPLETION='rg --files --hidden --follow --no-ignore-vcs '
+export FZF_DEFAULT_COMPLETION='fd --type file --follow --color=always --hidden --exclude .git'
+# export FZF_DEFAULT_OPTS='--height 40%'
+export FZF_DEFAULT_OPTS='--ansi'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 export WINIT_X11_SCALE_FACTOR=1
@@ -154,7 +156,7 @@ alias tmux="tmux -u"
 alias asdf="setxkbmap us -variant dvorak && echo 'Changed to Dvorak Layout'"
 alias aoeu="setxkbmap us && echo 'Changed to QWERTY Layout'"
 alias em="emacsclient -c -a 'emacs'"
-alias fd="fdfind"
+# alias fd="fdfind"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -188,3 +190,6 @@ esac
 # pnpm end
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="$PATH:/Users/rahulkulkarni/.modular/bin"
+#export PATH="/Library/Java/JavaVirtualMachines/graalvm-jdk-23.0.2+7.1/Contents/Home/bin:$PATH"
+
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/graalvm-jdk-23.0.2+7.1/Contents/Home"

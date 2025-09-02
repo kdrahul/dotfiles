@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/rahulkulkarni/dotfiles/nvim/.config/nvim/lua/kdconfig'
 let g:netrw_dirhist_0='/home/rdk/dev/todo-logic'
 let g:netrw_dirhist_9='/home/rdk/qmk_firmware/lib/chibios-contrib/ext/nxp-middleware-usb/output/source'
 let g:netrw_dirhist_8='/home/rdk/.config'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_5='/home/rdk/dev/java_stuff/survey/src/main/java/com'
 let g:netrw_dirhist_4='/home/rdk/dev/java_stuff/survey/src/main/java'
 let g:netrw_dirhist_3='/home/rdk/dev/java_stuff/survey/src/main'
 let g:netrw_dirhist_2='/home/rdk/dev/java_stuff/survey/src'
-let g:netrw_dirhist_1='/home/rdk/dev/java_stuff/survey'

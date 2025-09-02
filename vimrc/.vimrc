@@ -3,9 +3,9 @@ let mapleader="\<Space>"
 
 let &t_ut=''
 
-source /home/rdk/.vim/plugins.vim
-source /home/rdk/.vim/keymaps.vim
-source /home/rdk/.vim/settings.vim
+source $HOME/.vim/plugins.vim
+source $HOME/.vim/keymaps.vim
+source $HOME/.vim/settings.vim
 
 let g:mkdp_browser = 'firefox'
 
