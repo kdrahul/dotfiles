@@ -1,7 +1,10 @@
 background = 1d1f21
 foreground = c5c8c6
+#font-family = "JetBrains Mono"
 font-family = "Iosevka"
-font-size = 18
-adjust-cell-height=-25%
+# font-family = "Menlo"
+
+font-size = 20
+adjust-cell-height=-30%
 
 window-decoration = false

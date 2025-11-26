@@ -1,0 +1,48 @@
+(setq package-archives
+	  '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
+		("MELPA"        . "https://melpa.org/packages/")
+		("ORG"          . "https://orgmode.org/elpa/")
+		("MELPA Stable" . "https://stable.melpa.org/packages/")
+		("nongnu"       . "https://elpa.nongnu.org/nongnu/"))
+	  package-archive-priorities
+	  '(("GNU ELPA"     . 20)
+		("MELPA"        . 15)
+		("ORG"          . 10)
+		("MELPA Stable" . 5)
+		("nongnu"       . 0)))
+
+(package-initialize)
+(setq tool-bar-mode     0    ;; Remove toolbar
+      scroll-bar-mode   0    ;; Remove scollbars
+      menu-bar-mode     0    ;; Remove menu bar
+      blink-cursor-mode 0)   ;; Solid cursor, not blinking
+
+
+(setq ring-bell-function 'ignore)
+(setq enabled-option t
+      disabled-option nil
+      enabled-mode 1
+      disabled-mode 0)
+;; Blind me less
+(load-theme 'tango-dark t)
+(set-face-attribute 'default nil :height 200)
+
+;;(menu-bar-mode -1)
+(setq line-number-mode t)
+(require 'tree-sitter)
+
+;;;; DO NOT TOUCH BELOW LINES!!!
+;;;; They are system generated.
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(tree-sitter)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
