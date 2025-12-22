@@ -1,12 +1,9 @@
 
 [env]
-TERM = "alacritty"
+TERM = "xterm-256color"
 
 [font]
 size = 18
-
-[font.normal]
-family = "Menlo"
 
 [font.offset]
 x = -1

@@ -190,6 +190,5 @@ esac
 # pnpm end
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="$PATH:/Users/rahulkulkarni/.modular/bin"
-#export PATH="/Library/Java/JavaVirtualMachines/graalvm-jdk-23.0.2+7.1/Contents/Home/bin:$PATH"
 
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/graalvm-jdk-23.0.2+7.1/Contents/Home"
+export TERM=xterm-256color
