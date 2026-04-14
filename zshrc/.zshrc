@@ -8,7 +8,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts:/usr/pgadmin4/bin:/usr/local/go/bin:$HOME/.emacs.d/bin:$PATH
 
-export PNPM_HOME="/home/rdk/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -103,7 +103,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey -s '^f' 'ranger\n'
 bindkey -s '^[s' 'exa -lh\n'
 
-# bindkey '^e' edit-command-line
+#bindkey '^E' edit-command-line
 # You may need to manually set your language environment
 #export LANG=en_IN.UTF-8
 
@@ -165,10 +165,10 @@ alias em="emacsclient -c -a 'emacs'"
 alias python='python3'
 
 # bun completions
-[ -s "/home/rdk/.bun/_bun" ] && source "/home/rdk/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Bun
-export BUN_INSTALL="/home/rdk/.bun"
+export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 
@@ -182,17 +182,17 @@ export SDKMAN_DIR="$HOME/.sdkman"
 #export GOPHERJS_GOROOT="$(go1.17 env GOROOT)"  # Also add this line to your .profile or equivalent.
 
 # pnpm
-export PNPM_HOME="/home/rdk/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+#export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="$PATH:/Users/rahulkulkarni/.modular/bin"
 
 export TERM=xterm-256color
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.4.1
-eval "$(rbenv init -)"
+#source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+#source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+#chruby ruby-3.4.1
+#eval "$(rbenv init -)"
