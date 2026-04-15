@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts:/usr/pgadmin4/bin:/usr/local/go/bin:$HOME/.emacs.d/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/scripts:/usr/pgadmin4/bin:/usr/local/go/bin:$HOME/.emacs.d/bin:$HOME/go/bin:$PATH
 
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
@@ -196,3 +196,8 @@ export TERM=xterm-256color
 #source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 #chruby ruby-3.4.1
 #eval "$(rbenv init -)"
+
+export PATH="$PATH:$HOME/gitrepos/lua-language-server/bin/"
+
+export PATH=~/.npm-global/bin:$PATH
+export PATH=~/go/bin:$PATH
