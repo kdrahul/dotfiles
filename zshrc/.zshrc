@@ -201,3 +201,4 @@ export PATH="$PATH:$HOME/gitrepos/lua-language-server/bin/"
 
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/go/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
