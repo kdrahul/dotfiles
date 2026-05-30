@@ -1,0 +1,51 @@
+
+# Theme
+# include ./ayu-mirage.conf
+# include ./github_dark.conf
+# include ./github_light.conf
+# include ./github_dark_dimmed.conf
+# include ./tokyonight.conf
+# include ./catppuccin.conf
+# include ./onedark.conf
+# include ./base16-tomorrow-night.conf
+#include ./base16-tomorrow-night-256.conf
+
+# Font
+# font_family Ubuntu Mono
+# font_family JetBrainsMono 
+# font_family Fira Code
+# font_family Noto Mono
+# font_family Iosevka Term
+# font_family Roboto Mono
+# font_family Victor Mono 
+# font_family Operator Mono Bold # Find it on [Fonnts](https://fonnts.com/operator-mono/#google_vignette)
+
+font_size 20
+adjust_line_height -8
+#adjust_column_height -0
+adjust_baseline 4
+
+# Stop blinking the damn cursor
+cursor_blink_interval 0
+cursor_shape block
+# background_opacity 0.5
+
+sync_to_monitor yes
+disable_ligatures never
+
+enable_audio_bell no
+
+map ctrl+shift+s launch --cwd=current --type=tab
+
+
+# BEGIN_KITTY_FONTS
+font_family      family='JetBrains Mono'
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
+
+# BEGIN_KITTY_THEME
+# Hardcore
+include current-theme.conf
+# END_KITTY_THEME
