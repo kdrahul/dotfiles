@@ -116,9 +116,7 @@ fi
 
 source /usr/local/fzf/completion.zsh
 source /usr/local/fzf/key-bindings.zsh
-# export FZF_DEFAULT_COMPLETION='rg --files --hidden --follow --no-ignore-vcs '
 export FZF_DEFAULT_COMPLETION='fd --type file --follow --color=always --hidden --exclude .git'
-# export FZF_DEFAULT_OPTS='--height 40%'
 export FZF_DEFAULT_OPTS='--ansi'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
@@ -172,13 +170,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 
-# Load Angular CLI autocompletion.
-# source <(ng completion script)
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 #export GOPHERJS_GOROOT="$(go1.17 env GOROOT)"  # Also add this line to your .profile or equivalent.
 
 # pnpm
@@ -202,3 +193,5 @@ export PATH="$PATH:$HOME/gitrepos/lua-language-server/bin/"
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+export DB_PASSWORD="/VcZ7njFgjApe4PYOsyQIN2s6l0ekbXg"

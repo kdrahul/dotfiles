@@ -78,8 +78,9 @@ vim.pack.add({
 
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
-    { src = "https://github.com/catppuccin/nvim",               name = "catppuccin" },
+    { src = "https://github.com/catppuccin/nvim",                          name = "catppuccin" },
     { src = "https://github.com/thesimonho/kanagawa-paper.nvim" },
+    { src = "https://github.com/meanderingprogrammer/render-markdown.nvim" },
 
 })
 
@@ -89,6 +90,7 @@ vim.lsp.enable({
     "ts_ls",
     "rust_analyzer",
     "zls",
+    "elixir-ls",
 })
 
 vim.treesitter.language.add('go')
@@ -97,6 +99,7 @@ vim.treesitter.language.add('lua')
 vim.treesitter.language.add('javascript')
 vim.treesitter.language.add('rust')
 vim.treesitter.language.add('zig')
+vim.treesitter.language.add('elixir')
 
 vim.diagnostic.config({ virtual_text = true })
 
@@ -184,13 +187,18 @@ require('mini.base16').setup({
 -- })
 
 require('mason').setup()
+require('render-markdown').setup({})
 
 
+----------------
+--- Keybindings
+----------------
 vim.keymap.set('n', '<leader>sf', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>sg', ":Pick files tool='git'<CR>")
 vim.keymap.set('n', '<leader><leader>', ':Pick buffers<CR>')
 vim.keymap.set('n', '<leader>sr', ":Pick grep_live tool='rg'<CR>")
 vim.keymap.set('n', '<leader>ft', MiniFiles.open)
+vim.keymap.set('n', '<C-t>', ':Timestamp<CR>')
 
 vim.diagnostic.config {
     update_in_insert = false,
@@ -205,6 +213,15 @@ vim.diagnostic.config {
     -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
     jump = { float = true },
 }
+
+vim.api.nvim_create_user_command("Timestamp", function()
+    vim.api.nvim_put(
+        { os.date("%Y-%m-%d %H:%M:%S") },
+        "l",
+        true,
+        true
+    )
+end, {})
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('my.lsp', {}),
