@@ -67,30 +67,28 @@ vim.schedule(function() vim.o.clipboard = 'unnamedplus' end) -- Sync clipboard w
 -- Plugins
 -- vim.pack.add({})
 vim.pack.add({
-    "https://github.com/folke/tokyonight.nvim",
-    "https://github.com/neovim/nvim-lspconfig",
-    "https://github.com/nyoom-engineering/oxocarbon.nvim",
-    "https://github.com/vague-theme/vague.nvim",
-    "https://github.com/nvim-mini/mini.nvim",
-    "https://github.com/saghen/blink.cmp",
-    "https://github.com/nvim-treesitter/nvim-treesitter",
-    "https://github.com/deparr/tairiki.nvim",
-
-    { src = "https://github.com/mason-org/mason.nvim" },
-    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
-    { src = "https://github.com/catppuccin/nvim",                          name = "catppuccin" },
-    { src = "https://github.com/thesimonho/kanagawa-paper.nvim" },
-    { src = "https://github.com/meanderingprogrammer/render-markdown.nvim" },
-
+  "https://github.com/folke/tokyonight.nvim",
+  "https://github.com/neovim/nvim-lspconfig",
+  "https://github.com/nyoom-engineering/oxocarbon.nvim",
+  "https://github.com/vague-theme/vague.nvim",
+  "https://github.com/nvim-mini/mini.nvim",
+  "https://github.com/saghen/blink.lib",
+  "https://github.com/saghen/blink.cmp",
+  "https://github.com/nvim-treesitter/nvim-treesitter",
+  "https://github.com/deparr/tairiki.nvim",
+  "https://github.com/mason-org/mason.nvim",
+  "https://github.com/ellisonleao/gruvbox.nvim",
+  "https://github.com/navarasu/onedark.nvim",
+  'https://github.com/MeanderingProgrammer/render-markdown.nvim',
 })
 
 vim.lsp.enable({
-    "gopls",
-    "lua_ls",
-    "ts_ls",
-    "rust_analyzer",
-    "zls",
-    "elixir-ls",
+  "gopls",
+  "lua_ls",
+  "ts_ls",
+  "rust_analyzer",
+  "zls",
+  "clangd",
 })
 
 vim.treesitter.language.add('go')
@@ -99,7 +97,7 @@ vim.treesitter.language.add('lua')
 vim.treesitter.language.add('javascript')
 vim.treesitter.language.add('rust')
 vim.treesitter.language.add('zig')
-vim.treesitter.language.add('elixir')
+vim.treesitter.language.add('c')
 
 vim.diagnostic.config({ virtual_text = true })
 
@@ -224,17 +222,17 @@ vim.api.nvim_create_user_command("Timestamp", function()
 end, {})
 
 vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('my.lsp', {}),
-    callback = function(ev)
-        local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
-        if client:supports_method('textDocument/implementation') then
-            -- Create a keymap for vim.lsp.buf.implementation ...
-            vim.keymap.set('n', '<leader>i', vim.lsp.buf.implementation)
-            vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action)
-            vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
-            vim.keymap.set('n', '<leader>d', vim.lsp.buf.references)
-            vim.keymap.set('n', 'cd', vim.lsp.buf.rename)
-        end
+  group = vim.api.nvim_create_augroup('my.lsp', {}),
+  callback = function(ev)
+    local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
+    if client:supports_method('textDocument/implementation') then
+      -- Create a keymap for vim.lsp.buf.implementation ...
+      vim.keymap.set('n', '<leader>i', vim.lsp.buf.implementation)
+      vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action)
+      vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
+      vim.keymap.set('n', '<leader>d', vim.lsp.buf.declaration)
+      vim.keymap.set('n', 'cd', vim.lsp.buf.rename)
+    end
 
         -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
         if client:supports_method('textDocument/completion') then

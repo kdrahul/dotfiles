@@ -191,7 +191,28 @@ export TERM=xterm-256color
 export PATH="$PATH:$HOME/gitrepos/lua-language-server/bin/"
 
 export PATH=~/.npm-global/bin:$PATH
-export PATH=~/go/bin:$PATH
+export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-export DB_PASSWORD="/VcZ7njFgjApe4PYOsyQIN2s6l0ekbXg"
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rahulkulkarni/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/rahulkulkarni/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/rahulkulkarni/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/rahulkulkarni/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Pulsechart stuff
+export DB_URL=postgresql://hms_app:%2fVcZ7njFgjApe4PYOsyQIN2s6l0ekbXg@34.47.188.216:5432/billing
+
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/rahulkulkarni/.opam/opam-init/init.zsh' ]] || source '/Users/rahulkulkarni/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
